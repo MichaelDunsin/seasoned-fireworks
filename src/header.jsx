@@ -1,0 +1,39 @@
+import React, { createContext, useState } from "react"
+
+import LogoAndName from "./header components/logo$name";
+import PageName from "./header components/pagename";
+import NavTog from "./header components/navtog";
+import ThemeTog from "./header components/themetog";
+import MainNavbar from "./header components/maninavbar";
+import { useStore } from "./store";
+
+export const HeaderContext = createContext()
+
+export default function Header() {
+
+  const [navTog, setNavTog] = useState(false);
+  const [pageName, setpageName] = useState('');
+  const {theme} = useStore()
+
+  return (
+    <header className={`sticky flex z-20 -top-1 h-16 w-full justify-between ${theme === "light" ? "base-color" : "base-dark"} sm:h-20 md:h-24`}>
+      {/* note that whenever you use position sticky, add top-0 for it to actually stick */}
+<HeaderContext.Provider value ={{navTog, setNavTog, pageName, setpageName}}>
+
+  <LogoAndName />
+  < MainNavbar />
+  < PageName />
+  < NavTog />
+  < ThemeTog />
+
+</HeaderContext.Provider>
+     </header>
+  );
+}
+
+
+/* 
+
+have a state that updates to true if (theme === "dark" || (theme === "system" && systemDark)) and to false if otherwise
+
+*/

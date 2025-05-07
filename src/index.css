@@ -1,3 +1,162 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.base-dark{
+    background-color: #1f1c18;
+}
+
+.filter-cta{
+  filter: invert(52%) sepia(54%) saturate(2291%) hue-rotate(359deg) brightness(100%) contrast(108%);
+}
+
+.base-color{
+    background-color: #FFF5EE;
+}
+
+.brand-color{
+    background-color: #9E9E9E;
+}
+
+.white-brand{
+  background-color: #383737;
+}
+
+.cta-color{
+    background-color: #FF7F00;
+}
+
+.text-dark{
+    color: #eedcdc;
+}
+
+.text-brand{
+    color: #323232;
+}
+
+.text-cta{
+    color: #FF7F00;
+}
+
+.swelling-hover{
+    border: 2px solid #FF7F00;
+    color: #FF7F00;
+    transition: 0.5s;
+}
+.swelling-hover:hover{
+    scale: 1.05;
+}
+
+.default-font{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-logo{
+    font-family: "Lucida Handwriting", cursive;
+    font-size: x-small;
+
+}
+
+#mainNavbar a.active li{
+background-color: #FF7F00;
+width: 20px;
+border-radius: 70px;
+}
+
+#mainNavbar a.active{
+    color: #FF7F00;
+    font-weight: 500;
+}
+
+#categories a.active button{
+  background-color: #ff8000;
+  transition: 0.3s;
+}
+
+.transition-halfsec{
+    transition: 0.4s;
+}
+
+.filter-cta{
+    filter: invert(73%) sepia(63%) saturate(7491%) hue-rotate(9deg) brightness(114%) contrast(101%);
+}
+  
+  .arrow {
+    color: #FF7F00;
+    font-size: 13px;
+    transition: 0.3s;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    box-shadow: 1px/* padding left */ 1px/* padding top */ 10px/* saturation */ rgba(0, 0, 0, 0.5);
+    border: 2px solid transparent;
+  transition: 1s;
+  }
+
+  .glass-tiles {
+    background: rgba(185, 178, 178, 0.1); 
+    backdrop-filter: blur(10px);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid transparent;
+  transition: 1s;
+  }
+  
+.plain-glass{
+    background: rgba(185, 178, 178, 0.1); 
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
+
+}
+
+  .dropdown-option {
+    padding: 5px 10px;
+    margin: 5px 0px;
+    cursor: pointer;
+    transition:  0.3s;
+    border-radius: 4px;
+  }
+  
+  .theme-l:hover {
+    background-color: #dad9d9;
+  }
+  
+  .theme-d:hover {
+    background-color: #414141;
+  }
+
+  @keyframes customBounce1 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(40px);
+    }
+  }
+  
+  .bounce1 {
+    animation: customBounce1 3s infinite;
+  }
+  
+  @keyframes customBounce2 {
+    0%, 100% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(-60px);
+    }
+  }
+  
+  .bounce2 {
+    animation: customBounce2 3s infinite;
+  }
+
+  .flicker{
+    animation: animate 0.5s;
+}
+
+  @keyframes animate {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
