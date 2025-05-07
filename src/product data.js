@@ -16,6 +16,7 @@ const Product = async () => {
     }
   };
 
+  
   export const ProductData = await Product()
 
   /* here, If you do this:
