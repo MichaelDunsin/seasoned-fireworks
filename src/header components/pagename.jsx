@@ -8,8 +8,8 @@ export default function PageName(){
 return (
 <>
 {(pageName !== "Cart" && pageName !== "Checkout") &&
-<div id="pageName" className=" sm:hidden m-auto">
-      <span className=" text-cta font-medium">{pageName}</span>
+<div id="pageName" className=" absolute w-full text-center py-5 sm:hidden m-auto">
+      <span className=" text-cta  font-semibold">{pageName}</span>
        <div className=" m-auto h-1 w-5 rounded-full border cta-color border-transparent text-center"></div>
       </div>
 }
