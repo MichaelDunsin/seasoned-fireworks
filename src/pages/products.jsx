@@ -100,7 +100,7 @@ please use '' instead of "" for the routes. Also note that the routes are going 
           <NavLink to="/products" end>
             <button
               onClick={() => setCategoryIndex(null)}
-              className="rounded p-2 text-[11px] sm:px-4 sm:py-2 sm:text-sm md:text-lg"
+              className="rounded p-2 text-[13px] sm:px-4 sm:py-2 sm:text-sm md:text-lg"
             >
               Fruit Wine
             </button>
@@ -108,7 +108,7 @@ please use '' instead of "" for the routes. Also note that the routes are going 
           <NavLink to="bottle">
             <button
               onClick={() => setCategoryIndex(null)}
-              className="rounded p-2 text-[11px] sm:px-4 sm:py-2 sm:text-sm md:text-lg"
+              className="rounded p-2 text-[13px] sm:px-4 sm:py-2 sm:text-sm md:text-lg"
             >
               Bottles
             </button>
@@ -116,7 +116,7 @@ please use '' instead of "" for the routes. Also note that the routes are going 
           <NavLink to="picnic">
             <button
               onClick={() => setCategoryIndex(null)}
-              className="rounded p-2 text-[11px] sm:px-4 sm:py-2 sm:text-sm md:text-lg"
+              className="rounded p-2 text-[13px] sm:px-4 sm:py-2 sm:text-sm md:text-lg"
             >
               Picnic
             </button>
@@ -124,7 +124,7 @@ please use '' instead of "" for the routes. Also note that the routes are going 
           <NavLink to="slurpie">
             <button
               onClick={() => setCategoryIndex(null)}
-              className="rounded p-2 text-[11px] sm:px-4 sm:py-2 sm:text-sm md:text-lg"
+              className="rounded p-2 text-[13px] sm:px-4 sm:py-2 sm:text-sm md:text-lg"
             >
               Slurpies
             </button>
@@ -144,7 +144,7 @@ please use '' instead of "" for the routes. Also note that the routes are going 
                 onClick={() => setViewDetails(null)}
                 className="plain-glass absolute left-2 md:left-7 md:py-2 top-5 z-10 rounded-full px-3 text-2xl text-[12px] font-extrabold md:top-10 md:text-sm"
               >
-                🡠
+                &#10140;
               </button>
 
               <button
