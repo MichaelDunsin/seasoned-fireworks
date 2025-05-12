@@ -22,7 +22,7 @@ return (
             <img className=" filter-cta w-12 h-12" src="/images/email.png"/>
             <div className=" pl-6">
             <p className="mb-1 font-semibold">Email Address :</p>
-            <p className="text-sm">drinks@seasonedfireworks.com</p>
+            <p className="text-sm">drinks@seasoned fireworks.com</p>
             </div>
           </div>
           <div className="flex md:mt-8 mt-3 items-center text-sm">
@@ -53,7 +53,7 @@ return (
             <img className=" filter-cta w-12 h-12" src="/images/facebook.png"/>
             <div className=" pl-6">
             <p className="mb-1 font-semibold">Facebook :</p>
-            <p className="text-sm">facebook.com/SeasonedFireworks</p>
+            <p className="text-sm">facebook.com/ SeasonedFireworks</p>
             </div>
           </div>
         </div>

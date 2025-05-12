@@ -176,14 +176,14 @@ export default function Checkout() {
         <div>
             <button
 onClick={()=> handleCancel()}
-                className="plain-glass absolute rounded-full px-3 py-1 text-2xl font-extrabold"
+                className="plain-glass absolute rounded-full px-3 py-2 text-[12px] font-extrabold"
               >
                🡠
               </button>
-        <h2 className="mb-6 text-2xl w-full text-center font-bold">Checkout</h2>
+        <h2 className="mb-6 text-2xl w-full text-center font-semibold">Checkout</h2>
         <div className="plain-glass rounded-xl p-4 w-full">
         {/* Step Indicator */}
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center border border-black justify-between mb-2">
           {steps.map((s, idx) => {
             const status = step > s.id ? 'completed' : step === s.id ? 'current' : 'upcoming';
             return (
@@ -191,7 +191,7 @@ onClick={()=> handleCancel()}
                 {/* Connector */}
                 {idx > 0 && (
                   <div
-                    className={`h-1 absolute top-4 right-[50%] flex-1 ${step >= s.id ? 'bg-orange-500' : 'bg-gray-300'} w-full transition-all duration-300`}
+                    className={`h-1 absolute top-4 right-[50%] flex-1 ${step >= s.id ? 'bg-orange-500' : 'bg-gray-300'} w-[100%] transition-all duration-300`}
                   />
                 )}
 

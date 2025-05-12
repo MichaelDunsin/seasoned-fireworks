@@ -95,7 +95,7 @@ please use '' instead of "" for the routes. Also note that the routes are going 
         </div>
         <div
           id="categories"
-          className="plain-glass mx-auto mb-6 flex max-w-[410px] justify-center rounded border border-black p-1"
+          className="plain-glass mx-auto mb-6 flex max-w-[410px] justify-center rounded p-1"
         >
           <NavLink to="/products" end>
             <button
@@ -138,13 +138,13 @@ please use '' instead of "" for the routes. Also note that the routes are going 
         {viewDetails && (
           <div className="fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-70 transition-all">
             <div
-              className={` ${theme === "light" ? "base-color text-brand" : "base-dark text-dark"} relative h-5/6 w-11/12 overflow-auto rounded-lg pt-6 shadow-lg lg:w-5/6`}
+              className={` ${theme === "light" ? "base-color text-brand" : "base-dark text-dark"} relative h-[90%] w-[95%] overflow-auto rounded-lg pt-6 shadow-lg sm:w-11/12 lg:w-5/6`}
             >
               <button
                 onClick={() => setViewDetails(null)}
-                className="plain-glass absolute left-2 md:left-7 md:py-2 top-5 z-10 rounded-full px-3 text-2xl text-[12px] font-extrabold md:top-10 md:text-sm"
+                className="plain-glass absolute left-2 top-5 z-10 rounded-full px-3 text-[12px] font-extrabold md:left-7 md:top-10 py-2 md:text-sm"
               >
-                &#10140;
+                &#129136;
               </button>
 
               <button
@@ -171,9 +171,9 @@ please use '' instead of "" for the routes. Also note that the routes are going 
                     setCategoryIndex(categoryIndex - 1);
                   }
                 }}
-                className={` ${theme === "light" ? "bg-stone-300" : "bg-stone-700"} absolute left-2 top-[260px] z-10 rounded-full px-3 py-2 text-2xl font-extrabold xl:left-16`}
+                className={` ${theme === "light" ? "bg-stone-300" : "bg-stone-700"} absolute left-2 top-[260px] z-10 w-10 rounded-full py-1 text-2xl font-extrabold xl:left-16`}
               >
-                🡰
+                &#10094;
               </button>
               <button
                 onClick={() => {
@@ -183,12 +183,12 @@ please use '' instead of "" for the routes. Also note that the routes are going 
                     setCategoryIndex(categoryIndex + 1);
                   }
                 }}
-                className={` ${theme === "light" ? "bg-stone-300" : "bg-stone-700"} absolute right-2 top-[260px] z-10 rounded-full px-3 py-2 text-2xl font-extrabold xl:right-16`}
+                className={` ${theme === "light" ? "bg-stone-300" : "bg-stone-700"} absolute right-2 top-[260px] z-10 w-10 rounded-full py-1 text-2xl font-extrabold xl:right-16`}
               >
-                🡲
+                &#10095;
               </button>
 
-              <div className="relative mx-auto max-w-4xl p-6">
+              <div className="relative mx-auto max-w-4xl py-6">
                 {/* Header */}
                 <div className="m-auto mb-6 flex items-center justify-between">
                   <h2 className="m-auto text-lg font-bold md:text-xl">
@@ -202,7 +202,7 @@ please use '' instead of "" for the routes. Also note that the routes are going 
                     <img
                       src={viewDetails.image}
                       alt={viewDetails.name}
-                      className={`relative h-[275px] w-full ${flicker} rounded-xl object-cover sm:h-[300px]`}
+                      className={`relative mx-auto h-[275px] w-[97%] ${flicker} rounded-xl object-cover sm:h-[300px]`}
                     />
                     <div className="mt-7 flex w-[100%] items-center justify-center space-x-4 sm:w-[220%] md:w-[200%]">
                       {[
@@ -223,10 +223,10 @@ please use '' instead of "" for the routes. Also note that the routes are going 
                       ))}
                     </div>
                   </div>
-                  <div className="w-[100%] object-cover sm:w-[60%] md:w-1/2">
-                    <div className="plain-glass relative m-auto mt-3 max-h-[320px] min-h-[310px] w-[97%] space-y-1 overflow-auto rounded-xl px-4 pt-2 sm:mt-0 sm:h-[300px]">
-                      <div className="space-y-1">
-                        <h3 className="text-2xl font-bold">
+                  <div className="w-[100%] sm:w-[60%] md:w-1/2">
+                    <div className="plain-glass relative m-auto mt-3 max-h-[320px] min-h-[310px] w-[97%] space-y-2 overflow-auto rounded-xl px-2 pt-2 sm:mt-0 sm:h-[300px] md:space-y-1 md:px-4">
+                      <div className="space-y-2 md:space-y-1">
+                        <h3 className="font-semibold md:text-2xl">
                           {viewDetails.name}
                         </h3>
                         <div
@@ -234,19 +234,19 @@ please use '' instead of "" for the routes. Also note that the routes are going 
                         >
                           {viewDetails.description}
                         </div>
-                        <p className="text-xl">
+                        <p className="text-sm md:text-xl">
                           ${viewDetails.price.toFixed(2)}
                         </p>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <span className="text-cta mb-1 text-3xl">★</span>
+                        <span className="text-cta mb-1 md:text-3xl">★</span>
                         <span className={`${flicker} ml-2 text-sm`}>
-                          {viewDetails.rating} Stars
+                          {viewDetails.rating.toFixed(1)} Stars
                         </span>
                       </div>
 
                       <div className="flex items-center space-x-3">
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-2 text-sm">
                           <button
                             onClick={() =>
                               setQuantity(Math.max(1, quantity - 1))
@@ -276,13 +276,13 @@ please use '' instead of "" for the routes. Also note that the routes are going 
                               image: viewDetails.image,
                             })
                           }
-                          className="rounded bg-orange-500 px-4 py-2 backdrop-blur-[10px] transition duration-200 hover:bg-transparent"
+                          className="rounded bg-orange-500 px-4 py-2 text-sm backdrop-blur-[10px] transition duration-200 hover:bg-transparent"
                         >
                           Add to Cart
                         </button>
                         <button
                           onClick={() => handleBuyNow()}
-                          className="bg-[rgba(185, 178, 178, 0.1)] rounded px-4 py-2 backdrop-blur-[10px] transition duration-200 hover:bg-orange-500"
+                          className="bg-[rgba(185, 178, 178, 0.1)] rounded px-4 py-2 text-sm backdrop-blur-[10px] transition duration-200 hover:bg-orange-500"
                         >
                           Buy Now
                         </button>

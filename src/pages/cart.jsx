@@ -48,19 +48,19 @@ setNewCart({...existingItem, quantity: delta})
       {/* Cart Items */}
       <button
 onClick={()=>navigate(-1)}
-                className="plain-glass absolute rounded-full px-3 py-1 text-2xl font-extrabold"
+                className="plain-glass absolute rounded-full px-3 py-2 text-[12px] font-semibold  "
               >
-                🡠
+                &#129136;
               </button>
       <div className="flex-1">
-        <h2 className="mb-6 text-2xl w-full text-center font-bold">Cart</h2>
+        <h2 className="mb-6 text-2xl w-full text-center font-semibold">Cart</h2>
         <div className="space-y-2 overflow-y-scroll max-h-[360px] lg:h-96">
           {cart.length === 0 ? (<div className="flex lg:h-full h-[300px] items-center justify-center text-3xl md:text-5xl lg:text-6xl text-black/20 w-full rounded-lg plain-glass py-4 pr-2">Empty cart</div>)
           : 
           (cart.map((item) => (
             <div
               key={item.id}
-              className="flex items-center justify-between rounded-lg plain-glass py-4 pr-2"
+              className="flex text-sm md:text-base items-center justify-between rounded-lg plain-glass py-4 pr-2"
             >
               <div >
               <img
@@ -77,7 +77,7 @@ onClick={()=>navigate(-1)}
               </div>
               <div className="flex-1 px-4">
                 <h4 className="font-semibold">{item.name}</h4>
-                <p className="text-sm text-gray-600">{item.category}</p>
+                <p className=" text-gray-600">{item.category}</p>
               </div>
               <div > 
                 <p className="w-16 mb-1 text-right font-semibold">
@@ -140,7 +140,7 @@ onClick={()=>navigate(-1)}
             setIsOrderFromCart(true)
             setCheckoutData([subtotal, shipping, tax, total])
           }}
-           className="mt-4 w-full text-dark bg-orange-500 backdrop-blur-[10px] transition duration-200 rounded py-2 ">
+           className="mt-4 w-full text-dark bg-orange-500 text-sm md:text-base backdrop-blur-[10px] transition duration-200 rounded py-2 ">
               Checkout  
             </button>}
           </div>
