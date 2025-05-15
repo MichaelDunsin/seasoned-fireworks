@@ -52,7 +52,7 @@ export default function Home() {
             
             <p className="mt-4 text-sm sm:text-lg mb:text-xl lg:mb-16 lg:mt-10">
               Delicious vegetarian softdrink, crafted with fresh ingredients to
-              bring bact the flavours you love🍹.
+              bring back the flavours you love🍹.
             </p>
             <div className="mt-6 lg:mb-20 xl:mb-28">
               <NavLink to="/products">
