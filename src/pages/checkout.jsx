@@ -178,16 +178,16 @@ export default function Checkout() {
 onClick={()=> handleCancel()}
                 className="plain-glass absolute rounded-full px-3 py-2 text-[12px] font-extrabold"
               >
-               🡠
+                 ✖
               </button>
         <h2 className="mb-6 text-2xl w-full text-center font-semibold">Checkout</h2>
         <div className="plain-glass rounded-xl p-4 w-full">
         {/* Step Indicator */}
-        <div className="flex items-center border border-black justify-between mb-2">
+        <div className="flex items-center justify-between mb-2">
           {steps.map((s, idx) => {
             const status = step > s.id ? 'completed' : step === s.id ? 'current' : 'upcoming';
             return (
-              <div key={s.id} className="flex-1 flex flex-col relative items-center">
+              <div key={s.id} className=" flex-1 flex flex-col relative items-center ">
                 {/* Connector */}
                 {idx > 0 && (
                   <div
@@ -197,7 +197,7 @@ onClick={()=> handleCancel()}
 
                 {/* Circle */}
                 <div
-                  className={`w-8 z-10 h-8 rounded-full flex items-center justify-center 
+                  className={`w-8 z-10 h-8 rounded-full flex items-center justify-center text-sm md:text-base
                     ${status === 'completed' ? 'bg-orange-500' : status === 'current' ? 'bg-orange-500' : 'bg-gray-300'}
                     text-dark transition-all duration-300`}
                 >
@@ -214,25 +214,25 @@ onClick={()=> handleCancel()}
         </div>
 
         {/* Form Content */}
-        <div className=" p-2 overflow-y-scroll sm:min-h-[250px] h-[250px]">
+        <div className=" p-2 text-sm md:text-base overflow-y-scroll sm:min-h-[250px] h-[250px]">
           {step === 1 && (
             <div className="space-y-4">
                 <div className="w-full flex flex-col sm:flex-row gap-2 sm:gap-4">
                 <div className="w-full sm:w-1/2">
                 <h3 className=" mt-6">First Name</h3>
-                <input name="firstName" onChange={handleInputChange} value={formData.firstName || ''} type="text" placeholder="Michael" className="w-full p-2 outline-none glass border rounded" />
-                {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
+                <input name="firstName" onChange={handleInputChange} value={formData.firstName || ''} type="text" placeholder="Michael" className="w-full text-xs md:text-sm p-2 outline-none glass border rounded" />
+                {errors.firstName && <p className="text-red-500 text-xs md:text-sm">{errors.firstName}</p>}
                 </div>
                 <div className=" w-full sm:w-1/2">
                 <h3 className=" mt-6">Last Name</h3>
-                <input name="lastName" onChange={handleInputChange} value={formData.lastName || ''} type="text" placeholder="Richard" className="w-full p-2 outline-none glass border rounded" />
-                {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
+                <input name="lastName" onChange={handleInputChange} value={formData.lastName || ''} type="text" placeholder="Richard" className="w-full text-xs md:text-sm p-2 outline-none glass border rounded" />
+                {errors.lastName && <p className="text-red-500 text-xs md:text-sm">{errors.lastName}</p>}
                 </div>
                 </div>
                 <div className="w-full">
                 <h3 className=" mt-6">Email Address</h3>
-              <input name="email" onChange={handleInputChange} value={formData.email || ''} type="email" placeholder="yankedee@fireworks.com" className=" w-full sm:w-1/2 outline-none glass p-2 border rounded" />
-              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+              <input name="email" onChange={handleInputChange} value={formData.email || ''} type="email" placeholder="yankedee@fireworks.com" className=" w-full text-xs md:text-sm sm:w-1/2 outline-none glass p-2 border rounded" />
+              {errors.email && <p className="text-red-500 text-xs md:text-sm">{errors.email}</p>}
                 </div>
                 <div className="w-full">
                 <h3 className=" mt-6">Phone Number</h3>
@@ -245,8 +245,8 @@ onClick={()=> handleCancel()}
                 }}
                 inputMode="numeric"
               onChange={handleInputChange}
-               value={formData.phone || ''} type="text" maxLength={10} placeholder="09027371927" className="w-full sm:w-1/2 outline-none glass p-2 border rounded" />
-              {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+               value={formData.phone || ''} type="text" maxLength={10} placeholder="09027371927" className="w-full text-xs md:text-sm sm:w-1/2 outline-none glass p-2 border rounded" />
+              {errors.phone && <p className="text-red-500 text-xs md:text-sm">{errors.phone}</p>}
             </div>
             </div>
           )}
@@ -255,19 +255,19 @@ onClick={()=> handleCancel()}
             <div className="space-y-3">
                <div className="w-full">
                 <h3 className=" mt-6">Street Address</h3>
-              <input name="address" onChange={handleInputChange} value={formData.address || ''} type="text" placeholder="12, First Street, Dallas, Texas" className=" w-full sm:w-1/2 outline-none glass p-2 border rounded" />
-              {errors.address && <p className="text-red-500 text-sm">{errors.address}</p>}
+              <input name="address" onChange={handleInputChange} value={formData.address || ''} type="text" placeholder="12, First Street, Dallas, Texas" className=" w-full text-xs md:text-sm sm:w-1/2 outline-none glass p-2 border rounded" />
+              {errors.address && <p className="text-red-500 text-xs md:text-sm">{errors.address}</p>}
                 </div>
                 <div className="w-full">
                 <h3 className=" mt-6">City</h3>
-              <input name="city" onChange={handleInputChange} value={formData.city || ''} type="text" placeholder="Newyork" className="w-full sm:w-1/2 outline-none glass p-2 border rounded" />
-              {errors.city && <p className="text-red-500 text-sm">{errors.city}</p>}
+              <input name="city" onChange={handleInputChange} value={formData.city || ''} type="text" placeholder="Newyork" className="w-full sm:w-1/2 text-xs md:text-sm outline-none glass p-2 border rounded" />
+              {errors.city && <p className="text-red-500 text-xs md:text-sm">{errors.city}</p>}
             </div>
             <div className="w-full flex flex-col sm:flex-row gap-2 sm:gap-4">
                 <div className="w-full sm:w-1/2">
                 <h3 className=" mt-6">State/Region</h3>
-                <input name="state" onChange={handleInputChange} value={formData.state || ''} type="text" placeholder="Texas" className="w-full p-2 outline-none glass border rounded" />
-                {errors.state && <p className="text-red-500 text-sm">{errors.state}</p>}
+                <input name="state" onChange={handleInputChange} value={formData.state || ''} type="text" placeholder="Texas" className="w-full p-2 text-xs md:text-sm outline-none glass border rounded" />
+                {errors.state && <p className="text-red-500 text-xs md:text-sm">{errors.state}</p>}
                 </div>
                 <div className=" w-full sm:w-1/2">
                 <h3 className=" mt-6">ZIP code</h3>
@@ -277,8 +277,8 @@ onClick={()=> handleCancel()}
                 placeholder="708293" 
                 value={zip}
                 onChange={handleZipChange}
-                className="w-full p-2 outline-none glass border rounded" />
-                 {errors.zip && <p className="text-red-500 text-sm">{errors.zip}</p>}
+                className="w-full p-2 outline-none text-xs md:text-sm glass border rounded" />
+                 {errors.zip && <p className="text-red-500 text-xs md:text-sm">{errors.zip}</p>}
                 </div>
                 </div>
             </div>
@@ -288,8 +288,8 @@ onClick={()=> handleCancel()}
             <div className="space-y-3">
               <div className="w-full">
                 <h3 className=" mt-6">Card Bearer</h3>
-              <input name="cardBearer" onChange={handleInputChange} value={formData.cardBearer || ''} type="text" placeholder="Michael Richard" className=" w-full sm:w-1/2 outline-none glass p-2 border rounded" />
-              {errors.cardBearer && <p className="text-red-500 text-sm">{errors.cardBearer}</p>}
+              <input name="cardBearer" onChange={handleInputChange} value={formData.cardBearer || ''} type="text" placeholder="Michael Richard" className=" w-full text-xs md:text-sm sm:w-1/2 outline-none glass p-2 border rounded" />
+              {errors.cardBearer && <p className="text-red-500 text-xs md:text-sm">{errors.cardBearer}</p>}
                 </div>
                 <div className="w-full">
                 <h3 className=" mt-6">Card Number</h3>
@@ -299,8 +299,8 @@ onClick={()=> handleCancel()}
                 inputMode="numeric"
                 maxLength={16 + 3}
               placeholder="5211 2904 2385 6098" 
-              className="w-full sm:w-1/2 outline-none glass p-2 border rounded" />
-               {errors.cardNumber && <p className="text-red-500 text-sm">{errors.cardNumber}</p>}
+              className="w-full sm:w-1/2 outline-none glass p-2 border text-xs md:text-sm rounded" />
+               {errors.cardNumber && <p className="text-red-500 text-xs md:text-sm">{errors.cardNumber}</p>}
             </div>
             <div className="w-full flex flex-row gap-2 sm:gap-4">
                 <div className="w-1/2">
@@ -310,8 +310,8 @@ onClick={()=> handleCancel()}
                 onChange={handleExpiryChange}
                 inputMode="numeric"
                 placeholder="01/25" 
-                className="w-full p-2 outline-none glass border rounded" />
-                 {errors.expiry && <p className="text-red-500 text-sm">{errors.expiry}</p>}
+                className="w-full p-2 outline-none glass text-xs md:text-sm border rounded" />
+                 {errors.expiry && <p className="text-red-500 text-xs md:text-sm">{errors.expiry}</p>}
                 </div>
                 <div className=" w-1/2">
                 <h3 className=" mt-6">CVV</h3>
@@ -320,8 +320,8 @@ onClick={()=> handleCancel()}
                  value={cvv}
                  onChange={handleCvvChange}
                  inputMode="numeric"
-                 className="w-full p-2 outline-none glass border rounded" />
-                  {errors.cvv && <p className="text-red-500 text-sm">{errors.cvv}</p>}
+                 className="w-full p-2 outline-none glass border text-xs md:text-sm rounded" />
+                  {errors.cvv && <p className="text-red-500 text-xs md:text-sm">{errors.cvv}</p>}
                 </div>
                 </div>
             </div>
@@ -329,13 +329,13 @@ onClick={()=> handleCancel()}
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between mt-2">
+        <div className="flex text-sm md:text-base justify-between mt-2">
          <button
             onClick={prev}
             disabled={step === 1}
-            className="px-4 py-2 plain-glass rounded disabled:opacity-30"
+            className="px-4 py-2 plain-glass font-semibold rounded disabled:opacity-30"
           >
-            {step === 4 ? '🡠' : 'Previous'}
+            {step === 4 ? '⇐' : 'Previous'}
           </button>
           <button
             onClick={()=>{
@@ -366,7 +366,7 @@ onClick={()=> handleCancel()}
 
       {/* Summary */}
       <div className="h-fit plain-glass w-full rounded-xl p-4 lg:h-[415px] lg:w-80">
-        <h3 className="mb-4 text-lg font-semibold">Checkout Summary</h3>
+        <h3 className="mb-4 md:text-lg font-semibold">Checkout Summary</h3>
         <div className="flex flex-col justify-between lg:h-80">
           <div className=" hidden lg:block ">
             <div className="mb-2 flex justify-between text-sm">
@@ -383,7 +383,7 @@ onClick={()=> handleCancel()}
             </div>
           </div>
           <div className="border-t-2 border-orange-500 ">
-            <div className="flex justify-between pt-2 text-base font-bold">
+            <div className="flex justify-between pt-2 md:text-base text-sm font-bold">
               <span>Total</span>
               <span>${checkoutData[3].toFixed(2)}</span>
             </div>
@@ -414,7 +414,7 @@ onClick={()=> handleCancel()}
       {/* Button */}
       <button 
       onClick={()=>navigate('/products')}
-      className="mt-4 w-2/3 py-2 bg-orange-500 text-dark rounded-full shadow-md hover:bg-orange-600 transition">
+      className="mt-4 w-2/3 py-2 bg-orange-500 text-dark text-sm rounded-full shadow-md hover:bg-orange-600 transition">
         Continue Shopping
       </button>
     </div>

@@ -144,7 +144,7 @@ please use '' instead of "" for the routes. Also note that the routes are going 
                 onClick={() => setViewDetails(null)}
                 className="plain-glass absolute left-2 top-5 z-10 rounded-full px-3 text-[12px] font-extrabold md:left-7 md:top-10 py-2 md:text-sm"
               >
-                &#129136;
+             ✖
               </button>
 
               <button

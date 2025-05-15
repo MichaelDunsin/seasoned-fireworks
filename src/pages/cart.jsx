@@ -50,7 +50,7 @@ setNewCart({...existingItem, quantity: delta})
 onClick={()=>navigate(-1)}
                 className="plain-glass absolute rounded-full px-3 py-2 text-[12px] font-semibold  "
               >
-                &#129136;
+                  ✖
               </button>
       <div className="flex-1">
         <h2 className="mb-6 text-2xl w-full text-center font-semibold">Cart</h2>
