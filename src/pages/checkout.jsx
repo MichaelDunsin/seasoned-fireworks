@@ -245,7 +245,7 @@ onClick={()=> handleCancel()}
                 }}
                 inputMode="numeric"
               onChange={handleInputChange}
-               value={formData.phone || ''} type="text" maxLength={10} placeholder="09027371927" className="w-full text-xs md:text-sm sm:w-1/2 outline-none glass p-2 border rounded" />
+               value={formData.phone || ''} type="text" maxLength={11} placeholder="09027371927" className="w-full text-xs md:text-sm sm:w-1/2 outline-none glass p-2 border rounded" />
               {errors.phone && <p className="text-red-500 text-xs md:text-sm">{errors.phone}</p>}
             </div>
             </div>
