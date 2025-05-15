@@ -58,7 +58,7 @@
         "name": "Amber Bliss",
         "category": "Fruit Wine",
         "price": 19.99,
-        "image": "/images/alchohol 12/w7.jpg",
+        "image": "/images/alchohol 12/w7.png",
         "description": "Juicy and exotic, this tropical treasure brims with the sweet, tangy allure of ripe pineapples. A holiday in a bottle.",
         "rating": 4.0
       },
@@ -112,7 +112,7 @@
         "name": "Verdana Crush",
         "category": "Bottles",
         "price": 7.99,
-        "image": "/images/bottles 14/b1.jpg",
+        "image": "/images/bottles 14/b1.png",
         "description": "A lush, tropical fusion of juicy orange, ripe guava, and zesty lime.",
         "rating": 4.7
       },
@@ -121,7 +121,7 @@
         "name": "Jade Grove",
         "category": "Bottles",
         "price": 10.99,
-        "image": "/images/bottles 14/b2.jpg",
+        "image": "/images/bottles 14/b2.png",
         "description": "A verdant blend of garden-fresh guava, sun-drenched oranges, and tart lime, steeped in a wave of green vitality.",
         "rating": 4.6
       },
@@ -130,7 +130,7 @@
         "name": "Mango Basil Breeze",
         "category": "Bottles",
         "price": 9.99,
-        "image": "/images/bottles 14/b3.jpg",
+        "image": "/images/bottles 14/b3.png",
         "description": "Ripe mango and sweet basil swirl together in this golden, slightly herbal blend that’s equal parts lush and light.",
         "rating": 4.8
       },
@@ -193,7 +193,7 @@
         "name": "Peach Petal Glow",
         "category": "Bottles",
         "price": 11.99,
-        "image": "/images/bottles 14/b10.jpg",
+        "image": "/images/bottles 14/b10.png",
         "description": "A dreamy fusion of sun-ripened peach, a touch of strawberry, and creamy coconut milk—Peach Petal Glow is the essence of soft elegance",
         "rating": 4.2
       },
@@ -202,7 +202,7 @@
         "name": "Golden Grain Smoothie",
         "category": "Bottles",
         "price": 12.01,
-        "image": "/images/bottles 14/b11.jpg",
+        "image": "/images/bottles 14/b11.png",
         "description": "Banana, pear, soaked oats, and a splash of coconut milk — smooth, mellow, and comforting with that clean, warm wheat tone.",
         "rating": 4.5
       },
@@ -211,7 +211,7 @@
         "name": "Verdant Vibe",
         "category": "Bottles",
         "price": 9.99,
-        "image": "/images/bottles 14/b12.jpg",
+        "image": "/images/bottles 14/b12.png",
         "description": "A lush green fusion of ripe kiwi, crisp green apple, cool cucumber, and zesty lime.",
         "rating": 4.4
       },
@@ -463,7 +463,7 @@
         "name": "Lime Leaf Velvet",
         "category": "Slurpies",
         "price": 10.98,
-        "image": "/images/slurpies 12/s12.jpg",
+        "image": "/images/slurpies 12/s12.png",
         "description": "A botanical twist on the classic green smoothie, this one’s bright, mellow, and seriously calming.",
         "rating": 4.6
       }
