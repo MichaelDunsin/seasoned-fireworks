@@ -1,7 +1,6 @@
 import React, { createContext, useState } from "react"
 
 import LogoAndName from "./header components/logo$name";
-import PageName from "./header components/pagename";
 import NavTog from "./header components/navtog";
 import ThemeTog from "./header components/themetog";
 import MainNavbar from "./header components/maninavbar";
@@ -22,7 +21,6 @@ export default function Header() {
 
   <LogoAndName />
   < MainNavbar />
-  < PageName />
   < NavTog />
   < ThemeTog />
 

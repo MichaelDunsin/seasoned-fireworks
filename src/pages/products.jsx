@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useStore } from "../store";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Products() {
   const {
@@ -134,9 +135,17 @@ please use '' instead of "" for the routes. Also note that the routes are going 
         <div className="m-auto grid max-w-[350px] grid-cols-1 items-center gap-3 pt-10 sm:max-w-none sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <Outlet />
         </div>
-
+        <AnimatePresence >
+          {/* note that whenever you use Animatepresence for conditional rendering or mapping components, the <Animatepresence></Animatepresence> must be outside the {} (the curly braces where
+the render logic sits). Else, your exit animation won't work */}
         {viewDetails && (
-          <div className="fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-70 transition-all">
+          <motion.div 
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          exit={{opacity: 0}}
+           transition= {{duration: 0.1}}
+           
+          className="fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-70 transition-all">
             <div
               className={` ${theme === "light" ? "base-color text-brand" : "base-dark text-dark"} relative h-[90%] w-[95%] overflow-auto rounded-lg pt-6 shadow-lg sm:w-11/12 lg:w-5/6`}
             >
@@ -292,8 +301,9 @@ please use '' instead of "" for the routes. Also note that the routes are going 
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
+        </AnimatePresence>
       </div>
     </div>
   );

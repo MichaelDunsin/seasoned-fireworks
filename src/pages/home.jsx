@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useStore } from "../store";
 import { NavLink } from "react-router-dom";
+import { motion } from "motion/react";
 
 export default function Home() {
   const { theme } = useStore();
@@ -42,7 +43,20 @@ export default function Home() {
 
   return (
     <div>
-      <section className=" px-6 md:px-4">
+      <motion.section 
+      initial={{
+        opacity: 0,
+        x: -100
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 0.7,
+          delay: 0.6
+        }
+      }}
+      className=" px-6 md:px-4">
         <div className="container mx-auto flex flex-col-reverse items-center justify-between py-5 lg:flex-row lg:px-1 xl:px-16 2xl:px-48">
           <div className="max-w-sm text-center sm:max-w-xl lg:w-1/2 lg:text-left">
             <h1 className="text-2xl font-bold sm:text-4xl lg:text-5xl xl:max-w-lg">
@@ -77,13 +91,37 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
-      <section className="py-20 text-center">
-        <h2 className="text-3xl font-bold sm:text-4xl lg:text-3xl">
+      </motion.section>
+      <section 
+      className=" py-20 text-center">
+        <motion.h2 
+          initial={{
+          opacity: 0,
+          marginTop: "20px"
+        
+        }}/* when using viewport in framer motion, always remember to set the initial prop because if there is no initial prop, "once: true," will not work */
+        whileInView={{
+          opacity: 1,
+          marginTop: "0px"
+        }}
+        transition={{
+          duration: 0.5
+        }}
+        viewport={{
+          once: true,
+          amount: 'all', //don't go below 0.3 and don't use any of the text values 
+        }}
+        className="text-3xl font-bold sm:text-4xl lg:text-3xl">
           Our Values
-        </h2>
+        </motion.h2>
         <div className="m-auto mt-10 grid max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}/* when using viewport in framer motion, always remember to set the initial 
+            prop because if there is no initial prop, "once: true," will not work */
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2 }}
+        viewport={{ once: true, amount: 0.3, //don't go below 0.3 and don't use any of the text values 
+        }}
             className={`mx-auto max-w-96 py-12 md:h-72 md:max-h-96 lg:h-auto lg:max-h-none ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
           >
             <div className="transition-all duration-700 hover:scale-105">
@@ -97,8 +135,14 @@ export default function Home() {
                 of nolstagia with every bottle.
               </p>
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+          initial={{ opacity: 0, y: 20 }}/* when using viewport in framer motion, always remember to set the initial 
+            prop because if there is no initial prop, "once: true," will not work */
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2 }}
+        viewport={{ once: true, amount: 0.3, //don't go below 0.3 and don't use any of the text values 
+        }}
             className={`mx-auto max-w-96 py-12 md:h-72 md:max-h-96 lg:h-auto lg:max-h-none ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
           >
             <div className="transition-all duration-700 hover:scale-105">
@@ -111,8 +155,14 @@ export default function Home() {
                 interesting, energizing, and full of character
               </p>
             </div>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+          initial={{ opacity: 0, y: 20 }}/* when using viewport in framer motion, always remember to set the initial 
+            prop because if there is no initial prop, "once: true," will not work */
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2 }}
+        viewport={{ once: true, amount: 0.3, //don't go below 0.3 and don't use any of the text values 
+        }}
             className={`mx-auto max-w-96 py-12 md:col-span-2 md:h-72 md:max-h-96 lg:col-auto lg:h-auto lg:max-h-none ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
           >
             <div className="transition-all duration-700 hover:scale-105">
@@ -125,10 +175,17 @@ export default function Home() {
                 memories, every sip is fireworks 🎉.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
-      <section>
+      <motion.section
+      initial={{ opacity: 0, y: 20 }}/* when using viewport in framer motion, always remember to set the initial 
+            prop because if there is no initial prop, "once: true," will not work */
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2 }}
+        viewport={{ once: true, amount: 0.3, //don't go below 0.3 and don't use any of the text values 
+        }}
+      >
         <div className="relative m-auto w-full rounded-xl px-8 py-12 text-center">
           <h2 className="mb-4 text-2xl font-bold md:text-3xl">
             Join our weekly newsletter
@@ -157,7 +214,7 @@ export default function Home() {
             {error}
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }

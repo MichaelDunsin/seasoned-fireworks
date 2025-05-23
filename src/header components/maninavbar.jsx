@@ -13,23 +13,14 @@ export default function MainNavbar() {
 
   useEffect(
     function () {
-      if (basePath === "/") {
-        setpageName("Home");
-      }
-      if (basePath === "/products") {
-        setpageName("Our Products");
-      }
-      if (basePath === "/contact-us") {
-        setpageName("Contact Us");
-      }
-      if (basePath === "/privacy-policy") {
-        setpageName("Privacy Policy");
-      }
       if (basePath === "/cart") {
         setpageName("Cart");
       }
       if (basePath === "/checkout") {
         setpageName("Checkout");
+      }
+      else{
+         setpageName(null);
       }
     },
     [basePath],

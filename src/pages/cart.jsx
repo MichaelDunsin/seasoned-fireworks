@@ -1,6 +1,8 @@
 import {  useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../store";
+import { motion, AnimatePresence } from "motion/react"; //AnimatePresence enables the animation of components that have been removed from the tree.
+                                                        //When adding/removing more than a single child, every child must be given a unique key prop.
 
 export default function Cart() {
     const { cart, setNewCart, removeCart, setCheckoutData, checkoutData, isOrderFromCart, setIsOrderFromCart } = useStore();
@@ -57,10 +59,15 @@ onClick={()=>navigate(-1)}
         <div className="space-y-2 overflow-y-scroll max-h-[360px] lg:h-96">
           {cart.length === 0 ? (<div className="flex lg:h-full h-[300px] items-center justify-center text-3xl md:text-5xl lg:text-6xl text-black/20 w-full rounded-lg plain-glass py-4 pr-2">Empty cart</div>)
           : 
-          (cart.map((item) => (
-            <div
+          <AnimatePresence mode="sync">
+          {cart.map((item) => (
+            <motion.div
               key={item.id}
               className="flex text-sm md:text-base items-center justify-between rounded-lg plain-glass py-4 pr-2"
+              initial={{ opacity: 1 }}
+               animate={{ opacity: 1 }}
+                exit={{ opacity: 0, x: -300 }}
+                transition={{ duration: 0.3 }}
             >
               <div >
               <img
@@ -100,8 +107,9 @@ onClick={()=>navigate(-1)}
                   </button>
                 </div>
               </div>
-            </div>
-          )))
+            </motion.div>
+          ))}
+          </AnimatePresence>
           }
           
         </div>
