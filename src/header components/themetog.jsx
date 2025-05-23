@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useContext, useLayoutEffect } from "react";
 import { HeaderContext } from "../header"
 import { useStore } from "../store";
+import { AnimatePresence, motion } from "motion/react";
 
 export default function ThemeTog(){
 
@@ -57,7 +58,16 @@ const {theme, setTheme} = useStore()
 
 return (
 <>
-<div id="themetoogler" className={`  ${navTog ? "block" : "hidden"} sm:block absolute left-5 sm:left-0 sm:relative w-20 py-5 mr-2 z-20 `} ref={dropdownRef}>
+<AnimatePresence>
+{navTog && <motion.div 
+ initial={{opacity: 0,}}
+      animate={{opacity: 1, transition: {delay: 0.4}}}
+      exit={{opacity: 0,}}
+      transition={{
+        duration: 0.1,
+        
+      }}
+id="themetoogler" className={` sm:block absolute left-5 sm:left-0 sm:relative w-20 py-5 mr-2 z-20 `} ref={dropdownRef}>
       <div className=" font-medium border border-transparent px-1 cursor-pointer rounded-md flex justify-between items-center " onClick={toggleDropdown}>
         {selected || "Theme"}
         <span className={`arrow ${isOpen ? "rotate-0" : "rotate-180" }`}>▼</span>
@@ -78,7 +88,8 @@ return (
           ))}
         </div>
       )}
-    </div>
+    </motion.div>}
+    </AnimatePresence>
 </>
 )
 };

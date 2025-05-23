@@ -3,6 +3,8 @@ import { HeaderContext } from "../header";
 import { NavLink } from "react-router-dom";
 import { useStore } from "../store";
 import { useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "motion/react";
+import { div } from "motion/react-client";
 
 export default function MainNavbar() {
   const { navTog, setNavTog, setpageName, pageName } = useContext(HeaderContext);
@@ -26,60 +28,70 @@ export default function MainNavbar() {
     [basePath],
   );
 
+const navchildren = [
+  {path: "/", page: "Home" },
+  {path: "/products", page: "Products"},
+  {path: "/contact-us", page: "Contact Us"},
+  {path: "/privacy-policy", page: "Privacy Policy"}
+]
+
+const ParentVariant = {
+  initial: {opacity: 0, x: "100%"},
+  animate: {opacity: 1, x:0 },
+  exit: {opacity: 0, x: "100%"}
+}
+
+const ChildrenVariant = {
+  initial: {opacity: 0, x: 10},
+  animate: {opacity: 1, x:0 },
+  exit: {opacity: 0, x: 10}
+}
+
   return (
     <>
-    {pageName !== "Checkout" && 
-      <ul
+    <AnimatePresence>
+    {navTog && 
+      <motion.ul
+      variants={ParentVariant}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{
+        duration: 0.4,
+        when: "beforeChildren",
+        staggerChildren: 0.1
+      }}
         id="mainNavbar"
-        className={`absolute mt-2 sm:mt-0 items-center ${navTog ? "opacity-100" : "hidden opacity-0"} z-20 flex h-screen w-screen flex-col 
+        className={`absolute text-lg font-semibold mt-2 sm:mt-0 items-center z-20 flex h-screen w-screen flex-col 
         justify-between py-28 sm:flex ${theme === "light" ? "base-color" : "base-dark"} sm:relative sm:h-fit 
         sm:w-80 sm:flex-row sm:py-5 sm:opacity-100 md:w-96`}
       >
-        <NavLink to="/">
+        {
+          navchildren.map(child => {
+            return(
+              <motion.div
+              variants={ChildrenVariant}
+              transition={{duration: 0.1}}
+              >
+              <NavLink
+              to={child.path}>
           <div
             onClick={() => {
               setNavTog(!navTog);
             }}
           >
-            <span>Home</span>
+            <span>{child.page}</span>
             <li className="transition-halfsec m-auto h-1 w-0 rounded-full border border-transparent text-center"></li>
           </div>
         </NavLink>
-
-        <NavLink to="/products">
-          <div
-            onClick={() => {
-              setNavTog(!navTog);
-            }}
-          >
-            <span>Products</span>
-            <li className="transition-halfsec m-auto h-1 w-0 rounded-full border border-transparent text-center"></li>
-          </div>
-        </NavLink>
-
-        <NavLink to="/contact-us">
-          <div
-            onClick={() => {
-              setNavTog(!navTog);
-            }}
-          >
-            <span>Contact Us</span>
-            <li className="transition-halfsec m-auto h-1 w-0 rounded-full border border-transparent text-center"></li>
-          </div>
-        </NavLink>
-
-        <NavLink to="/privacy-policy">
-          <div
-            onClick={() => {
-              setNavTog(!navTog);
-            }}
-          >
-            <span>Privacy Policy</span>
-            <li className="transition-halfsec m-auto h-1 w-0 rounded-full border border-transparent text-center"></li>
-          </div>
-        </NavLink>
-      </ul>
+        </motion.div>
+            )
+          })
+        }
+        
+      </motion.ul>
       }
+      </AnimatePresence>
     </>
   );
 }
