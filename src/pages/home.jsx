@@ -94,7 +94,7 @@ export default function Home() {
       </motion.section>
       <section 
       className=" py-20 text-center">
-        <motion.h2 
+        <motion.div 
           initial={{
           opacity: 0,
           marginTop: "20px"
@@ -113,10 +113,10 @@ export default function Home() {
         }}
         className="text-3xl font-bold sm:text-4xl lg:text-3xl">
           Our Values
-        </motion.h2>
+        </motion.div>
         <div className="m-auto mt-10 grid max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}/* when using viewport in framer motion, always remember to set the initial 
+            initial={{ opacity: 0, y: 40 }}/* when using viewport in framer motion, always remember to set the initial 
             prop because if there is no initial prop, "once: true," will not work */
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2 }}
@@ -137,7 +137,7 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div
-          initial={{ opacity: 0, y: 20 }}/* when using viewport in framer motion, always remember to set the initial 
+          initial={{ opacity: 0, y: 40 }}/* when using viewport in framer motion, always remember to set the initial 
             prop because if there is no initial prop, "once: true," will not work */
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2 }}
@@ -157,7 +157,7 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div
-          initial={{ opacity: 0, y: 20 }}/* when using viewport in framer motion, always remember to set the initial 
+          initial={{ opacity: 0, y: 40 }}/* when using viewport in framer motion, always remember to set the initial 
             prop because if there is no initial prop, "once: true," will not work */
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2 }}
@@ -179,7 +179,7 @@ export default function Home() {
         </div>
       </section>
       <motion.section
-      initial={{ opacity: 0, y: 20 }}/* when using viewport in framer motion, always remember to set the initial 
+      initial={{ opacity: 0, y: 40 }}/* when using viewport in framer motion, always remember to set the initial 
             prop because if there is no initial prop, "once: true," will not work */
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2 }}
