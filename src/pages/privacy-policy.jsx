@@ -1,9 +1,23 @@
 import React from "react"
+import { motion } from "motion/react";
 
 export default function PrivacyPolicy(){
 
+const pageVariants = {
+   initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -40 },
+};
+
 return (
-<div className=" relative max-w-4xl mx-auto p-6 ">
+  
+<motion.div 
+variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+         transition={{ duration: 0.5 }}
+className=" relative max-w-4xl mx-auto p-6 ">
 <div
 style={{ backgroundImage: "url('/images/background.png')" }}
     className="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-5"
@@ -67,7 +81,8 @@ style={{ backgroundImage: "url('/images/background.png')" }}
          +44 7412 345678 📞</p>
       </section>
       </div>
-    </div>
+    </motion.div>
+    
 )
 };
 

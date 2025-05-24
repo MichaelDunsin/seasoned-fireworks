@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { HeaderContext } from "../header";
 import { NavLink } from "react-router-dom";
 import { useStore } from "../store";
@@ -41,9 +41,6 @@ export default function MainNavbar() {
       if(window.innerWidth >= 640){
         setNavTog(true)
       } // ✅ Runs every time the screen is resized
-      else{
-        setNavTog(false)
-      }
     };
 
     window.addEventListener("resize", handleResize); // ✅ Listens continuously
@@ -58,18 +55,15 @@ const navchildren = [
   {path: "/privacy-policy", page: "Privacy Policy"}
 ]
 
-let ParentVariant = {initial: {opacity: 1, x: 0},
-animate: {opacity: 1, x:0 },
-}
+const ParentVariant = isLargeScreen ? 
+        {initial: {opacity: 1, x: 0},
+        animate: {opacity: 1, x:0 },
+        } : {
+        initial: {opacity: 0, x: "100%"},
+          animate: {opacity: 1, x:0 },
+          exit: {opacity: 0, x: "100%"},
+        }
 
-if(!isLargeScreen){
-  ParentVariant = {
-  initial: {opacity: 0, x: "100%"},
-  animate: {opacity: 1, x:0 },
-  exit: {opacity: 0, x: "100%"},
-}
-
-}
 const ChildrenVariant = {
   initial: {opacity: 0, x: 10},
   animate: {opacity: 1, x:0 },
@@ -81,6 +75,7 @@ const ChildrenVariant = {
     <AnimatePresence>
     {(navTog) && 
       <motion.ul
+      key={isLargeScreen ? "desktop" : "mobile"} // this is what fixed my screen resizing devtools issue
       variants={ParentVariant}
       initial=  "initial"
       animate= "animate"

@@ -1,20 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useStore } from "../store";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function Products() {
   const {
-    viewDetails,
-    cart,
-    setNewCart,
-    setViewDetails,
-    categoryIndex,
-    setCategoryIndex,
-    categoryData,
-    setCheckoutData,
-    checkoutData,
-  } = useStore();
+    viewDetails, cart, setNewCart, setViewDetails, categoryIndex, setCategoryIndex, categoryData, setCheckoutData, checkoutData, } = useStore();
   const [quantity, setQuantity] = useState(1);
   const [flicker, setFlicker] = useState("");
   const [quantityNum, setQuantityNum] = useState(false);
@@ -69,8 +60,21 @@ export default function Products() {
     setCheckoutData([subtotal, shipping, tax, total]);
   };
 
+  const pageVariants = {
+   initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -40 },
+};
+
+
   return (
-    <div>
+    <motion.div
+    variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+         transition={{ duration: 0.5 }}
+    >
       <div className="container mx-auto px-8 py-10">
         <div className="px-5">
           <h1 className="mb-6 text-center text-2xl font-semibold sm:text-3xl md:text-4xl">
@@ -150,7 +154,9 @@ the render logic sits). Else, your exit animation won't work */}
               className={` ${theme === "light" ? "base-color text-brand" : "base-dark text-dark"} relative h-[90%] w-[95%] overflow-auto rounded-lg pt-6 shadow-lg sm:w-11/12 lg:w-5/6`}
             >
               <button
-                onClick={() => setViewDetails(null)}
+                onClick={() => {
+                  setViewDetails(null)
+                setCategoryIndex(null)}}
                 className="plain-glass absolute left-2 top-5 z-10 rounded-full px-3 text-[12px] font-extrabold md:left-7 md:top-10 py-2 md:text-sm"
               >
              ✖
@@ -305,6 +311,6 @@ the render logic sits). Else, your exit animation won't work */}
         )}
         </AnimatePresence>
       </div>
-    </div>
+    </motion.div>
   );
 }

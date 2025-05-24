@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../store";
+import { motion } from "motion/react";
 
 export default function Checkout() { 
 
@@ -14,6 +15,13 @@ export default function Checkout() {
     const [errors, setErrors] = useState({});
     const [confirm, setConfirm] = useState(true);
      const { cart, clearCart, checkoutData, clearCheckoutData, isOrderFromCart, setIsOrderFromCart } = useStore();
+
+     const pageVariants = {
+   initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -40 },
+};
+
 
    const HandleConfirm = () => {
       const timer = setTimeout(() => setConfirm(false), 2500); // 2 seconds loading
@@ -166,7 +174,13 @@ export default function Checkout() {
       )
 
   return ( 
-    <>
+    <motion.div
+    variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+         transition={{ duration: 0.5 }}
+    >
     {step !== 5 ? (<div className="mx-auto flex max-w-6xl flex-col gap-1 lg:gap-10 px-4 pt-1 lg:flex-row">
       {/* Cart Items */}
        <div className="flex-1 relative">
@@ -422,6 +436,6 @@ onClick={()=> handleCancel()}
       
 
     </div>)}
-    </>
+    </motion.div>
   );
 }

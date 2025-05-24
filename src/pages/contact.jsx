@@ -1,15 +1,42 @@
 import React from "react"
+import { motion } from "motion/react";
 
 export default function Contact(){
 
+const pageVariants = {
+   initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -40 },
+};
+
+
 return (
-<div>
+<motion.div
+variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+         transition={{ duration: 0.5 }}
+>
       <section className="text-center px-5 pt-10">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">Get In Touch With Us</h1>
       </section>
 
       <section className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-20">
-        <div className=" p-5 rounded-3xl glass-tiles">
+        <motion.div 
+          initial={{
+        opacity: 0,
+        x: "-100%"
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 0.1,
+          delay: 0.2
+        }
+      }}
+        className=" p-5 rounded-3xl glass-tiles">
           <h3 className="text-2xl font-semibold m-4">Customer Support</h3>
           <div className="flex items-center text-sm">
             <img className=" filter-cta w-12 h-12" src="/images/customer line.png"/>
@@ -32,8 +59,21 @@ return (
             <p className="text-sm">Seasoned Fireworks Ltd. 32 Brookfield Road, United Kingdom</p>
             </div>
           </div>
-        </div>
-        <div className=" p-5 rounded-3xl glass-tiles">
+        </motion.div>
+         <motion.div 
+          initial={{
+        opacity: 0,
+        x: "100%"
+      }}
+      animate={{
+        opacity: 1,
+        x: 0,
+      }}
+        transition= {{
+          duration: 0.1,
+          delay: 0.2
+        }}
+        className=" p-5 rounded-3xl glass-tiles">
           <h3 className="text-2xl font-semibold m-4">Socials</h3>
           <div className="flex items-center text-sm">
             <img className=" filter-cta w-12 h-12" src="/images/instagram.png"/>
@@ -56,7 +96,7 @@ return (
             <p className="text-sm">facebook.com/ SeasonedFireworks</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <div className=" mx-4 h-64 ">
@@ -70,6 +110,6 @@ return (
           title="Location Map"
         ></iframe>
       </div>
-</div>
+</motion.div>
 )
 };

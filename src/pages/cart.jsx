@@ -45,8 +45,21 @@ setNewCart({...existingItem, quantity: delta})
     }, [checkoutData]
   )
 
+  const pageVariants = {
+   initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -40 },
+};
+
+
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-10 p-6 lg:flex-row">
+    <motion.div 
+    variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+         transition={{ duration: 0.5 }}
+    className="mx-auto flex max-w-6xl flex-col gap-10 p-6 lg:flex-row">
       {/* Cart Items */}
       <button
 onClick={()=>navigate(-1)}
@@ -154,6 +167,6 @@ onClick={()=>navigate(-1)}
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

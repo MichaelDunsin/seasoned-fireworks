@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useStore } from "../store";
 import { NavLink } from "react-router-dom";
 import { motion } from "motion/react";
