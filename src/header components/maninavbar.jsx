@@ -33,7 +33,7 @@ export default function MainNavbar() {
       if(isLargeScreen){
         setNavTog(true)
       }
-    },[]
+    }
   )
 
   useEffect(() => {
