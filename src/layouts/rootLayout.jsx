@@ -8,6 +8,7 @@ import ScrollToTop from "../scrollToTop";
 export default function RootLayout() {
 const {theme} = useStore()
 const location = useLocation();
+ const basePath = "/" + location.pathname.split("/")[1];
 
 
 
@@ -15,9 +16,9 @@ const location = useLocation();
     <div className={` ${theme === "light" ? "base-color text-brand" : "base-dark text-dark"} w-full min-h-screen default-font `}>
 <Header />
 <ScrollToTop/> {/* with this, each route starts from the top of the page on render */}
-<AnimatePresence mode="mode" >
+<AnimatePresence mode="wait" >
   <div 
-  key={location.pathname}>
+  key={basePath}>
 <Outlet />
 <div 
 className=" mt-20 sm:text-sm text-[11px] text-center pb-5 px-2 w-full">

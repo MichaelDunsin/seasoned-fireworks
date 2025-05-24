@@ -22,7 +22,7 @@ variants={pageVariants}
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">Get In Touch With Us</h1>
       </section>
 
-      <section className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-20">
+      <section className="container overflow-x-hidden mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-20">
         <motion.div 
           initial={{
         opacity: 0,
