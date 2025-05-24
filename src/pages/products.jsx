@@ -151,7 +151,7 @@ the render logic sits). Else, your exit animation won't work */}
            
           className="fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-70 transition-all">
             <div
-              className={` ${theme === "light" ? "base-color text-brand" : "base-dark text-dark"} relative h-[90%] w-[95%] overflow-auto rounded-lg pt-6 shadow-lg sm:w-11/12 lg:w-5/6`}
+              className={` ${theme === "light" ? "base-color text-brand" : "base-dark text-dark"} relative h-[90%] w-[95%] overflow-x-hidden rounded-lg pt-6 shadow-lg sm:w-11/12 lg:w-5/6`}
             >
               <button
                 onClick={() => {
@@ -214,10 +214,14 @@ the render logic sits). Else, your exit animation won't work */}
                 <div className="flex flex-col sm:flex-row">
                   {/* image plus thumbnails */}
                   <div className="w-[100%] sm:w-1/2">
-                    <img
+                    <motion.img
+                    initial={{opacity: 0, y: 50}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{type: "spring", stiffness: 80}}
                       src={viewDetails.image}
                       alt={viewDetails.name}
-                      className={`relative mx-auto h-[275px] w-[97%] ${flicker} rounded-xl object-cover sm:h-[300px]`}
+                      key={categoryIndex}
+                      className={`relative mx-auto h-[275px] w-[97%] rounded-xl object-cover sm:h-[300px]`}
                     />
                     <div className="mt-7 flex w-[100%] items-center justify-center space-x-4 sm:w-[220%] md:w-[200%]">
                       {[
@@ -225,7 +229,7 @@ the render logic sits). Else, your exit animation won't work */}
                         categoryData[categoryIndex],
                         categoryData[nextIndex],
                       ].map((i) => (
-                        <div
+                        <motion.div
                           key={i.id}
                           className={` ${i.id === viewDetails.id ? "rounded border border-neutral-400" : "h-20 w-20"} transition-all ${flicker} `}
                         >
@@ -234,12 +238,17 @@ the render logic sits). Else, your exit animation won't work */}
                             alt={i.name}
                             className={`rounded ${i.id === viewDetails.id ? "m-1 h-20 w-20" : "h-full w-full"} object-cover`}
                           />
-                        </div>
+                        </motion.div>
                       ))}
                     </div>
                   </div>
                   <div className="w-[100%] sm:w-[60%] md:w-1/2">
-                    <div className="plain-glass relative m-auto mt-3 max-h-[320px] min-h-[310px] w-[97%] space-y-2 overflow-auto rounded-xl px-2 pt-2 sm:mt-0 sm:h-[300px] md:space-y-1 md:px-4">
+                    <motion.div 
+                      initial={{opacity: 0, x: 50}}
+                    animate={{opacity: 1, x: 0}}
+                    transition={{type: "spring", stiffness: 80}}
+                    key={categoryIndex}
+                    className="plain-glass relative m-auto mt-3 max-h-[320px] min-h-[310px] w-[97%] space-y-2 overflow-auto rounded-xl px-2 pt-2 sm:mt-0 sm:h-[300px] md:space-y-1 md:px-4">
                       <div className="space-y-2 md:space-y-1">
                         <h3 className="font-semibold md:text-2xl">
                           {viewDetails.name}
@@ -302,7 +311,7 @@ the render logic sits). Else, your exit animation won't work */}
                           Buy Now
                         </button>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>
