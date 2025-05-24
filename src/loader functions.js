@@ -30,3 +30,4 @@ export function Picnicloader() {
 export function Slurpieloader() {
     return products.filter(product => product.category === "Slurpies"); 
 }
+
