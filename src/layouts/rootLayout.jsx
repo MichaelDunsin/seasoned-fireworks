@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../header";
 import { Outlet, NavLink, useLocation } from "react-router-dom";
 import { useStore } from "../store";
@@ -13,7 +12,7 @@ const location = useLocation();
 
 
   return (
-    <div className={` ${theme === "light" ? "base-color text-brand" : "base-dark text-dark"} w-full min-h-screen default-font `}>
+    <div className={` ${theme === "light" ? "base-color text-brand" : "base-dark text-dark"} w-full min-h-screen `}>
 <Header />
 <ScrollToTop/> {/* with this, each route starts from the top of the page on render */}
 <AnimatePresence mode="wait" >
