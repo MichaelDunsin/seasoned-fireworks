@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body{
+font-family: 'Inter', sans-serif;
+}
+
 .base-dark{
     background-color: #1f1c18;
 }
