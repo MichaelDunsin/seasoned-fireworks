@@ -1,5 +1,6 @@
-import React, { useContext } from "react"
+import { useContext } from "react"
 import { HeaderContext } from "../header"
+import { Menu, X } from "lucide-react"
 
 
 export default function NavTog(){
@@ -13,11 +14,15 @@ return (
         id="mobileNavTooglerButton"
         className={`z-20 my-3 mr-3 h-fit hover:cursor-pointer sm:hidden`}
       >
-        <img
-          src= {`${navTog ? '/images/close.png' : '/images/menu (1).png'}`}
+        <div
+          
           className={` filter-cta transition-halfsec ${navTog ? 'rotate-180' : 'rotate-0'} `}
           onClick={() => setNavTog(!navTog)}
-        />
+        >
+        {
+          navTog ? < X size={30}/> : <Menu size={30}/>
+        }
+        </div>
       </div>
 }
 </>

@@ -87,7 +87,7 @@ const ChildrenVariant = {
       }}
         id="mainNavbar"
         className={`absolute text-lg sm:text-base font-semibold mt-2 sm:mt-0 items-center z-20 flex h-screen w-screen flex-col 
-       py-28 sm:flex ${theme === "light" ? "base-color" : "base-dark"} sm:relative sm:h-fit 
+       py-28 sm:flex ${theme === "light" ? "bg-[#171511]" : "base-dark"} sm:relative sm:h-fit 
         sm:w-80 sm:flex-row sm:py-5 sm:opacity-100 md:w-96`}
       >
         {

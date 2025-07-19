@@ -67,7 +67,7 @@ return (
         duration: 0.1,
       }}
 id="themetoogler" className={` sm:block absolute left-5 sm:left-0 sm:relative w-20 py-5 mr-2 z-20 `} ref={dropdownRef}>
-      <div className=" font-medium border border-transparent px-1 cursor-pointer rounded-md flex justify-between items-center " onClick={toggleDropdown}>
+      <div className=" font-medium border border-transparent px-1 cursor-pointer rounded-md flex justify-between items-center" onClick={toggleDropdown}>
         {selected || "Theme"}
         <span className={`arrow ${isOpen ? "rotate-0" : "rotate-180" }`}>▼</span>
       </div>
@@ -80,11 +80,11 @@ id="themetoogler" className={` sm:block absolute left-5 sm:left-0 sm:relative w-
       transition={{
         duration: 0.1,
       }}
-        className=" glass absolute top-16 left-0 w-full flex flex-col rounded-md overflow-hidden z-20">
+        className=" bg-[#2a2926] absolute top-16 left-0 w-full flex flex-col rounded-md overflow-hidden z-20">
           {options.map((option) => (
             <div
               key={option}
-              className={`dropdown-option ${theme === "light" ? "theme-l" : "theme-d"} ${selected === option ? "text-cta" : ""}`}
+              className={`dropdown-option theme-d ${selected === option ? "text-cta" : ""}`}
               onClick={() =>  { 
                                 setSelected(option);
                                 setIsOpen(false);

@@ -56,7 +56,7 @@ export default function Home() {
           delay: 0.6
         }
       }}
-      className=" px-6 md:px-4">
+      className=" -mb-3 -mt-3 px-6 md:px-4">
         <div className="container mx-auto flex flex-col-reverse items-center justify-between py-5 lg:flex-row lg:px-1 xl:px-16 2xl:px-48">
           <div className="max-w-sm text-center sm:max-w-xl lg:w-1/2 lg:text-left">
             <h1 className="text-2xl font-bold sm:text-4xl lg:text-5xl xl:max-w-lg">
@@ -93,7 +93,7 @@ export default function Home() {
         </div>
       </motion.section>
       <section 
-      className=" py-20 text-center">
+      className={`py-20 text-dark rounded-t-xl -z-10 text-center ${theme === "light" ? "bg-[#171511]" : "bg-[#2a2926]"}`}>
         <motion.div 
           initial={{
           opacity: 0,
@@ -124,7 +124,7 @@ export default function Home() {
         }}
             className={`mx-auto max-w-96 py-12 md:h-72 md:max-h-96 lg:h-auto lg:max-h-none ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
           >
-            <div className="transition-all duration-700 hover:scale-105">
+            <div className="transition-all duration-[0.5s] hover:-translate-y-4">
               <h3 className="text-cta text-xl font-semibold md:text-2xl">
                 Fresh Ingredients, Timeless Taste
               </h3>
@@ -145,7 +145,7 @@ export default function Home() {
         }}
             className={`mx-auto max-w-96 py-12 md:h-72 md:max-h-96 lg:h-auto lg:max-h-none ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
           >
-            <div className="transition-all duration-700 hover:scale-105">
+            <div className="transition-all duration-[0.5s] hover:-translate-y-4">
               <h3 className="text-cta text-xl font-semibold md:text-2xl">
                 For Women, By Women
               </h3>
@@ -165,7 +165,7 @@ export default function Home() {
         }}
             className={`mx-auto max-w-96 py-12 md:col-span-2 md:h-72 md:max-h-96 lg:col-auto lg:h-auto lg:max-h-none ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
           >
-            <div className="transition-all duration-700 hover:scale-105">
+            <div className="transition-all duration-[0.5s] hover:-translate-y-4">
               <h3 className="text-cta text-xl font-semibold md:text-2xl">
                 A Colourful Experience
               </h3>
@@ -186,7 +186,7 @@ export default function Home() {
         viewport={{ once: true, amount: 0.3, //don't go below 0.3 and don't use any of the text values 
         }}
       >
-        <div className="relative m-auto w-full rounded-xl px-8 py-12 text-center">
+        <div className={`relative ${theme === "light" ? "header-color" : ""} m-auto w-full px-8 py-12 text-center`}>
           <h2 className="mb-4 text-2xl font-bold md:text-3xl">
             Join our weekly newsletter
           </h2>
@@ -199,7 +199,7 @@ export default function Home() {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={`w-full ${theme === "light" ? "glass" : "glass-tiles"} rounded-lg px-4 py-3 focus:outline-none md:w-1/3 md:max-w-xl`}
+              className={`w-full ${theme === "light" ? "base-color" : "glass-tiles"} rounded-lg px-4 py-3 focus:outline-none md:w-1/3 md:max-w-xl`}
             />
             <button
               onClick={handleSubmit}

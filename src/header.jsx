@@ -15,7 +15,7 @@ export default function Header() {
   const {theme} = useStore()
 
   return (
-    <header className={`sticky flex z-20 -top-1 h-20 w-full justify-between ${theme === "light" ? "base-color" : "base-dark"} md:h-24`}>
+    <header className={`sticky text-dark flex z-20 -top-1 h-20 w-full justify-between ${theme === "light" ? "bg-[#171511]" : "base-dark"} md:h-24`}>
       {/* note that whenever you use position sticky, add top-0 for it to actually stick */}
 <HeaderContext.Provider value ={{navTog, setNavTog, pageName, setpageName}}>
 

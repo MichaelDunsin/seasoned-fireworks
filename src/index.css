@@ -8,7 +8,7 @@ font-family: 'Inter', sans-serif;
 }
 
 .base-dark{
-    background-color: #1f1c18;
+    background-color: #0f0e0c;
 }
 
 .filter-cta{
@@ -18,6 +18,11 @@ font-family: 'Inter', sans-serif;
 .base-color{
     background-color: #FFF5EE;
 }
+
+.header-color{
+     background-color: #f9c6a2;
+}
+
 
 .brand-color{
     background-color: #9E9E9E;
@@ -117,10 +122,6 @@ border-radius: 70px;
     cursor: pointer;
     transition:  0.3s;
     border-radius: 4px;
-  }
-  
-  .theme-l:hover {
-    background-color: #dad9d9;
   }
   
   .theme-d:hover {
