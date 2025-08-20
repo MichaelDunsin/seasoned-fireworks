@@ -88,7 +88,7 @@ please use '' instead of "" for the routes. Also note that the routes are going 
             className="relative ml-auto w-fit"
           >
             <img
-              src="/images/cart.png"
+              src="/images/cart.webp"
               className="filter-cta mb-2 w-5 cursor-pointer md:w-7"
             />
             <figcaption
@@ -168,7 +168,7 @@ the render logic sits). Else, your exit animation won't work */}
               >
                 <figure className="relative ml-auto w-fit">
                   <img
-                    src="/images/cart.png"
+                    src="/images/cart.webp"
                     className="filter-cta mb-2 w-5 cursor-pointer md:w-7"
                   />
                   <figcaption

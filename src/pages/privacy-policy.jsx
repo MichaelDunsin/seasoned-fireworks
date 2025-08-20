@@ -19,7 +19,7 @@ variants={pageVariants}
          transition={{ duration: 0.5 }}
 className=" relative max-w-4xl mx-auto p-6 ">
 <div
-style={{ backgroundImage: "url('/images/background.png')" }}
+style={{ backgroundImage: "url('/images/background.webp')" }}
     className="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-5"
     aria-hidden="true"
   ></div>

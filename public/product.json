@@ -4,7 +4,7 @@
       "name": "Apple Cider Bliss",
       "category": "Fruit Wine",
       "price": 17.99,
-      "image": "/images/alchohol 12/w1.jpg",
+      "image": "/images/alchohol 12/w1.webp",
       "description": "With golden hues and a refreshing finish, it's like sipping the soul of an autumn orchard—bright, bold, and deeply satisfying.",
       "rating": 4.5
     },
@@ -13,7 +13,7 @@
         "name": "Velvet Vine Reserve",
         "category": "Fruit Wine",
         "price": 20.99,
-        "image": "/images/alchohol 12/w2.jpg",
+        "image": "/images/alchohol 12/w2.webp",
         "description": "Aged to perfection, this reserve blend offers deep flavours of blackcurrant and plum, wrapped in subtle oak and spice.",
         "rating": 4.4
       },
@@ -22,7 +22,7 @@
         "name": "Citrus Ember Brew",
         "category": "Fruit Wine",
         "price": 19.01,
-        "image": "/images/alchohol 12/w3.jpg",
+        "image": "/images/alchohol 12/w3.webp",
         "description": "Bursting with the brightness of orange, lime, and tangerine, this brew finishes with a subtle ember-like spice that lingers on the palate.",
         "rating": 4.3
       },
@@ -31,7 +31,7 @@
         "name": "Golden Bloom Elixir",
         "category": "Fruit Wine",
         "price": 19.01,
-        "image":  "/images/alchohol 12/w4.jpg",
+        "image":  "/images/alchohol 12/w4.webp",
         "description": "With hints of chamomile, elderflower, and a touch of honeyed apricot, it blooms on the palate like sunlight through wildflowers.",
         "rating": 4.2
       },
@@ -40,7 +40,7 @@
         "name": "Blackcurrant Bliss",
         "category": "Fruit Wine",
         "price": 18.99,
-        "image": "/images/alchohol 12/w5.jpg",
+        "image": "/images/alchohol 12/w5.webp",
         "description": "Dark and decadent, this rich blueberry wine evokes the serenity of a moonlit orchard. Naturally sweet with a velvety texture.",
         "rating": 4.1
       },
@@ -49,7 +49,7 @@
         "name": "Peach Perfection",
         "category": "Fruit Wine",
         "price": 20.99,
-        "image": "/images/alchohol 12/w6.jpg",
+        "image": "/images/alchohol 12/w6.webp",
         "description": "Light and luscious, this wine captures the juiciness of perfectly ripened peaches with a clean, sweet finish.",
         "rating": 4.6
       },
@@ -58,7 +58,7 @@
         "name": "Amber Bliss",
         "category": "Fruit Wine",
         "price": 19.99,
-        "image": "/images/alchohol 12/w7.png",
+        "image": "/images/alchohol 12/w7.webp",
         "description": "Juicy and exotic, this tropical treasure brims with the sweet, tangy allure of ripe pineapples. A holiday in a bottle.",
         "rating": 4.0
       },
@@ -67,7 +67,7 @@
         "name": "Nature's Whisper",
         "category": "Fruit Wine",
         "price": 21.95,
-        "image": "/images/alchohol 12/w8.jpg",
+        "image": "/images/alchohol 12/w8.webp",
         "description": "With notes of rosemary, sage, and a whisper of mint, this herbal blend offers a clean, revitalising flavour with a naturally bittersweet edge.",
         "rating": 4.7
       },
@@ -76,7 +76,7 @@
         "name": "Lemon Lush",
         "category": "Fruit Wine",
         "price": 16.89,
-        "image": "/images/alchohol 12/w9.jpg",
+        "image": "/images/alchohol 12/w9.webp",
         "description": "A smooth, citrus-forward wine with vibrant lime notes and a whisper of sweetness—an energising tropical treat.",
         "rating": 4.9
       },
@@ -85,7 +85,7 @@
         "name": "Citrus Glow",
         "category": "Fruit Wine",
         "price": 17.99,
-        "image": "/images/alchohol 12/w10.jpg",
+        "image": "/images/alchohol 12/w10.webp",
         "description": "A radiant blend of citrus fruits delivering a burst of zesty sunshine in every sip. Light-bodied and energising.",
         "rating": 4.3
       },
@@ -94,7 +94,7 @@
         "name": "Berry Royale",
         "category": "Fruit Wine",
         "price": 18.88,
-        "image": "/images/alchohol 12/w11.jpg",
+        "image": "/images/alchohol 12/w11.webp",
         "description": "A tart and tangy delight that dances on the palate with bright cranberry tones and a refreshing, lip-smacking finish.",
         "rating": 4.5
       },
@@ -103,7 +103,7 @@
         "name": "Plum Royale",
         "category": "Fruit Wine",
         "price": 17.98,
-        "image": "/images/alchohol 12/w12.jpg",
+        "image": "/images/alchohol 12/w12.webp",
         "description": "Deep and elegant, this regal wine balances the boldness of ripe plums with a touch of spice and a velvet finish.",
         "rating": 4.2
       },
@@ -112,7 +112,7 @@
         "name": "Verdana Crush",
         "category": "Bottles",
         "price": 7.99,
-        "image": "/images/bottles 14/b1.png",
+        "image": "/images/bottles 14/b1.webp",
         "description": "A lush, tropical fusion of juicy orange, ripe guava, and zesty lime.",
         "rating": 4.7
       },
@@ -121,7 +121,7 @@
         "name": "Jade Grove",
         "category": "Bottles",
         "price": 10.99,
-        "image": "/images/bottles 14/b2.png",
+        "image": "/images/bottles 14/b2.webp",
         "description": "A verdant blend of garden-fresh guava, sun-drenched oranges, and tart lime, steeped in a wave of green vitality.",
         "rating": 4.6
       },
@@ -130,7 +130,7 @@
         "name": "Mango Basil Breeze",
         "category": "Bottles",
         "price": 9.99,
-        "image": "/images/bottles 14/b3.png",
+        "image": "/images/bottles 14/b3.webp",
         "description": "Ripe mango and sweet basil swirl together in this golden, slightly herbal blend that’s equal parts lush and light.",
         "rating": 4.8
       },
@@ -139,7 +139,7 @@
         "name": "Emerald Zest",
         "category": "Bottles",
         "price": 11.99,
-        "image": "/images/bottles 14/b4.jpg",
+        "image": "/images/bottles 14/b4.webp",
         "description": "A punchy, vibrant splash of sun-ripened kiwi with a twist of citrus and a hint of cool mint.",
         "rating": 4.1
       },
@@ -148,7 +148,7 @@
         "name": "Twilight Berry Bloom",
         "category": "Bottles",
         "price": 12.99,
-        "image": "/images/bottles 14/b5.jpg",
+        "image": "/images/bottles 14/b5.webp",
         "description": "A rich, velvety swirl of ripe blueberries with subtle hints of blackcurrant and a whisper of lavender.",
         "rating": 4.5
       },
@@ -157,7 +157,7 @@
         "name": "Solar Squeeze",
         "category": "Bottles",
         "price": 8.99,
-        "image": "/images/bottles 14/b6.jpg",
+        "image": "/images/bottles 14/b6.webp",
         "description": "Bursting with the pure essence of sun-ripened oranges, Solar Squeeze is a golden pour of citrus sunshine.",
         "rating": 4.3
       },
@@ -166,7 +166,7 @@
         "name": "Crimson Ember",
         "category": "Bottles",
         "price": 9.90,
-        "image": "/images/bottles 14/b7.jpg",
+        "image": "/images/bottles 14/b7.webp",
         "description": "A bold fusion of pomegranate, sun-dried dates, and black plums, Crimson Ember Elixir glows with warmth and depth.",
         "rating": 4.4
       },
@@ -175,7 +175,7 @@
         "name": "Sunburst Orange",
         "category": "Bottles",
         "price": 9.99,
-        "image": "/images/bottles 14/b8.jpg",
+        "image": "/images/bottles 14/b8.webp",
         "description": "A radiant rush of sun-ripened oranges with a twist of lemon and a subtle fizz—bright, juicy, and brimming with citrusy sparkle.",
         "rating": 4.3
       },
@@ -184,7 +184,7 @@
         "name": "Blueberry Sage",
         "category": "Bottles",
         "price": 10.01,
-        "image": "/images/bottles 14/b9.jpg",
+        "image": "/images/bottles 14/b9.webp",
         "description": "A moody, antioxidant-rich mix of wild blueberries, subtle garden and a touch of orange.",
         "rating": 4.3
       },
@@ -193,7 +193,7 @@
         "name": "Peach Petal Glow",
         "category": "Bottles",
         "price": 11.99,
-        "image": "/images/bottles 14/b10.png",
+        "image": "/images/bottles 14/b10.webp",
         "description": "A dreamy fusion of sun-ripened peach, a touch of strawberry, and creamy coconut milk—Peach Petal Glow is the essence of soft elegance",
         "rating": 4.2
       },
@@ -202,7 +202,7 @@
         "name": "Golden Grain Smoothie",
         "category": "Bottles",
         "price": 12.01,
-        "image": "/images/bottles 14/b11.png",
+        "image": "/images/bottles 14/b11.webp",
         "description": "Banana, pear, soaked oats, and a splash of coconut milk — smooth, mellow, and comforting with that clean, warm wheat tone.",
         "rating": 4.5
       },
@@ -211,7 +211,7 @@
         "name": "Verdant Vibe",
         "category": "Bottles",
         "price": 9.99,
-        "image": "/images/bottles 14/b12.png",
+        "image": "/images/bottles 14/b12.webp",
         "description": "A lush green fusion of ripe kiwi, crisp green apple, cool cucumber, and zesty lime.",
         "rating": 4.4
       },
@@ -220,7 +220,7 @@
         "name": "Whisperleaf",
         "category": "Bottles",
         "price": 10.99,
-        "image": "/images/bottles 14/b13.jpg",
+        "image": "/images/bottles 14/b13.webp",
         "description": "Delicately steeped herbs like lemongrass, mint, and holy basil mingle with cucumber essence and a hint of green grape.",
         "rating": 4.8
       },
@@ -229,7 +229,7 @@
         "name": "Clementine Rush",
         "category": "Bottles",
         "price": 11.89,
-        "image": "/images/bottles 14/b14.jpg",
+        "image": "/images/bottles 14/b14.webp",
         "description": "A juicy burst of sweet tangerines with a splash of citrus zest.",
         "rating": 4.6
       },
@@ -238,7 +238,7 @@
         "name": "Apple Cup",
         "category": "Picnic",
         "price": 11.89,
-        "image": "/images/picnic 14/p1.jpg",
+        "image": "/images/picnic 14/p1.webp",
         "description": "Sun-kissed apples, handpicked at peak ripeness, are cold-pressed to perfection in this crisp and refreshing golden blend.",
         "rating": 4.6
       },
@@ -247,7 +247,7 @@
         "name": "Orange Can",
         "category": "Picnic",
         "price": 9.89,
-        "image": "/images/picnic 14/p2.jpg",
+        "image": "/images/picnic 14/p2.webp",
         "description": "Freshly squeezed from the juiciest oranges, ripened under golden skies. It is smooth, tangy, and naturally sweet.",
         "rating": 4.7
       },
@@ -256,7 +256,7 @@
         "name": "Apple Jug",
         "category": "Picnic",
         "price": 18.89,
-        "image": "/images/picnic 14/p3.jpg",
+        "image": "/images/picnic 14/p3.webp",
         "description": "Sun-kissed apples, handpicked at peak ripeness, are cold-pressed to perfection in this crisp and refreshing golden blend.",
         "rating": 4.6
       },
@@ -265,7 +265,7 @@
         "name": "Apple Bucket",
         "category": "Picnic",
         "price": 25.89,
-        "image": "/images/picnic 14/p4.jpg",
+        "image": "/images/picnic 14/p4.webp",
         "description": "Sun-kissed apples, handpicked at peak ripeness, are cold-pressed to perfection in this crisp and refreshing golden blend.",
         "rating": 4.6
       },
@@ -274,7 +274,7 @@
         "name": "Orange Box",
         "category": "Picnic",
         "price": 6.01,
-        "image": "/images/picnic 14/p5.jpg",
+        "image": "/images/picnic 14/p5.webp",
         "description": "Freshly squeezed from the juiciest oranges, ripened under golden skies. It is smooth, tangy, and naturally sweet.",
         "rating": 4.7
       },
@@ -283,7 +283,7 @@
         "name": "Just Juice",
         "category": "Picnic",
         "price": 18.01,
-        "image": "/images/picnic 14/p6.jpg",
+        "image": "/images/picnic 14/p6.webp",
         "description": "The perfect blend of strawberries and kiwis with an appple base.",
         "rating": 4.5
       },
@@ -292,7 +292,7 @@
         "name": "Pear Punch",
         "category": "Picnic",
         "price": 18.89,
-        "image": "/images/picnic 14/p7.jpg",
+        "image": "/images/picnic 14/p7.webp",
         "description": "A beautiful blend of sun-pecked pears perfectly concocted for a blissful taste.",
         "rating": 4.5
       },
@@ -301,7 +301,7 @@
         "name": "Apple Tumbler",
         "category": "Picnic",
         "price": 15.99,
-        "image": "/images/picnic 14/p8.jpg",
+        "image": "/images/picnic 14/p8.webp",
         "description": "Sun-kissed apples, handpicked at peak ripeness, are cold-pressed to perfection in this crisp and refreshing golden blend.",
         "rating": 4.5
       },
@@ -310,7 +310,7 @@
         "name": "Strawberry Yoghurt",
         "category": "Picnic",
         "price": 12.99,
-        "image": "/images/picnic 14/p9.jpg",
+        "image": "/images/picnic 14/p9.webp",
         "description": "A creamy, tangy strawberry yoghurt that combines the smooth richness of dairy with the natural sweetness and refreshing taste of ripe strawberries.",
         "rating": 4.5
       },
@@ -319,7 +319,7 @@
         "name": "Rotokas",
         "category": "Picnic",
         "price": 20.99,
-        "image": "/images/picnic 14/p10.jpg",
+        "image": "/images/picnic 14/p10.webp",
         "description": "Made from freshly squeezed limes, it offers a perfect balance of tartness and sweetness, providing a revitalizing experience on hot days or whenever you need a pick-me-up.",
         "rating": 4.7
       },
@@ -328,7 +328,7 @@
         "name": "Tangy Mango",
         "category": "Picnic",
         "price": 15.09,
-        "image": "/images/picnic 14/p11.jpg",
+        "image": "/images/picnic 14/p11.webp",
         "description": "Made with pure mango puree and a hint of natural sweetness, it offers a smooth, refreshing flavor that transports you to a sunny paradise.",
         "rating": 4.6
       },
@@ -337,7 +337,7 @@
         "name": "Twin Tropicals",
         "category": "Picnic",
         "price": 18.89,
-        "image": "/images/picnic 14/p12.jpg",
+        "image": "/images/picnic 14/p12.webp",
         "description": "Bursting with natural sweetness and a hint of tropical zest, this beverage offers a smooth and invigorating experience.",
         "rating": 4.6
       },
@@ -346,7 +346,7 @@
         "name": "Orange Bucket",
         "category": "Picnic",
         "price": 25.50,
-        "image": "/images/picnic 14/p13.jpg",
+        "image": "/images/picnic 14/p13.webp",
         "description": "Freshly squeezed from the juiciest oranges, ripened under golden skies. It is smooth, tangy, and naturally sweet.",
         "rating": 4.7
       },
@@ -355,7 +355,7 @@
         "name": "Berry Smoothie",
         "category": "Picnic",
         "price": 13.80,
-        "image": "/images/picnic 14/p14.jpg",
+        "image": "/images/picnic 14/p14.webp",
         "description": "A deliciously creamy berry smoothie packed with the vibrant flavors of fresh strawberries, blueberries, raspberries, and blackberries.",
         "rating": 4.6
       },
@@ -364,7 +364,7 @@
         "name": "Crimson Chill",
         "category": "Slurpies",
         "price": 9.98,
-        "image": "/images/slurpies 12/s1.jpg",
+        "image": "/images/slurpies 12/s1.webp",
         "description": "A bold, frozen fusion of tart cherries and lush raspberries, whipped into a velvety smoothie that hits with tang and finishes with deep berry sweetness.",
         "rating": 4.2
       },
@@ -373,7 +373,7 @@
         "name": "Pineapple Radiance",
         "category": "Slurpies",
         "price": 8.98,
-        "image": "/images/slurpies 12/s2.jpg",
+        "image": "/images/slurpies 12/s2.webp",
         "description": " Smooth, sweet, and zesty with a bright tang, it's the perfect island escape—no passport needed.",
         "rating": 4.3
       },
@@ -382,7 +382,7 @@
         "name": "Brown Sugar Bliss",
         "category": "Slurpies",
         "price": 10.98,
-        "image": "/images/slurpies 12/s3.jpg",
+        "image": "/images/slurpies 12/s3.webp",
         "description": "A creamy indulgence cascading with molten brown sugar syrup and packed with chewy black pearls and golden popping boba.",
         "rating": 4.4
       },
@@ -391,7 +391,7 @@
         "name": "Blushberry Fizz",
         "category": "Slurpies",
         "price": 10.98,
-        "image": "/images/slurpies 12/s4.jpg",
+        "image": "/images/slurpies 12/s4.webp",
         "description": "A sparkling blend of strawberries, raspberries, and a twist of lime—light, bubbly, and flirty with a sweet citrus edge.",
         "rating": 4.1
       },
@@ -400,7 +400,7 @@
         "name": "Zest Mirage",
         "category": "Slurpies",
         "price": 9.01,
-        "image": "/images/slurpies 12/s5.jpg",
+        "image": "/images/slurpies 12/s5.webp",
         "description": "Lemon, tangerine, and grapefruit swirl with sparkling soda and a hint of rosemary—bright, clean, and dreamlike.",
         "rating": 4.6
       },
@@ -409,7 +409,7 @@
         "name": "Avococo Chill",
         "category": "Slurpies",
         "price": 9.90,
-        "image": "/images/slurpies 12/s6.jpg",
+        "image": "/images/slurpies 12/s6.webp",
         "description": "A tropical fusion of avocado, coconut milk, and vanilla ice",
         "rating": 4.3
       },
@@ -418,7 +418,7 @@
         "name": "Green Velvet Latte",
         "category": "Slurpies",
         "price": 8.99,
-        "image": "/images/slurpies 12/s7.jpg",
+        "image": "/images/slurpies 12/s7.webp",
         "description": "Avocado, matcha, and almond milk swirled into a smooth iced latte.",
         "rating": 4.2
       },
@@ -427,7 +427,7 @@
         "name": "Sunset Tide",
         "category": "Slurpies",
         "price": 10.99,
-        "image": "/images/slurpies 12/s8.jpg",
+        "image": "/images/slurpies 12/s8.webp",
         "description": "A vibrant mix of pineapple, mango, and coconut water with a splash of grenadine—like sipping the last rays of a tropical sun.",
         "rating": 4.4
       },
@@ -436,7 +436,7 @@
         "name": "Avocado Dream Whirl",
         "category": "Slurpies",
         "price": 9.99,
-        "image": "/images/slurpies 12/s9.jpg",
+        "image": "/images/slurpies 12/s9.webp",
         "description": "A silky-smooth blend of ripe avocado, sweet cream, and a hint of honey.",
         "rating": 4.3
       },
@@ -445,7 +445,7 @@
         "name": "Tropical Matcha",
         "category": "Slurpies",
         "price": 9.98,
-        "image": "/images/slurpies 12/s10.jpg",
+        "image": "/images/slurpies 12/s10.webp",
         "description": "A vibrant, layered fusion of creamy avocado, ripe mango, and earthy matcha. Perfect for hot days, post-yoga glow, or your next aesthetic IG post.",
         "rating": 4.0
       },
@@ -454,7 +454,7 @@
         "name": "Tropicado mix",
         "category": "Slurpies",
         "price": 7.99,
-        "image": "/images/slurpies 12/s11.jpg",
+        "image": "/images/slurpies 12/s11.webp",
         "description": "A bold mix of avocado, mango and a splash of lime juice.",
         "rating": 4.3
       },
@@ -463,7 +463,7 @@
         "name": "Lime Leaf Velvet",
         "category": "Slurpies",
         "price": 10.98,
-        "image": "/images/slurpies 12/s12.png",
+        "image": "/images/slurpies 12/s12.webp",
         "description": "A botanical twist on the classic green smoothie, this one’s bright, mellow, and seriously calming.",
         "rating": 4.6
       }

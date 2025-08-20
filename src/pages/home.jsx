@@ -78,16 +78,19 @@ export default function Home() {
           </div>
           <div className="relative lg:w-1/2">
             <img
-              src="/images/floating orange.png"
+              src="/images/floating orange.webp"
               className="bounce1 absolute w-1/4 max-w-40"
+              alt="floation orange"
             />
             <img
-              src="/images/hero.png"
+              src="/images/hero.webp"
               className="m-auto w-2/3 max-w-md lg:max-w-none"
+              alt="hero"
             />
             <img
-              src="/images/floating avocado.png"
+              src="/images/floating avocado.webp"
               className="bounce2 absolute bottom-3 right-3 w-1/4 max-w-40"
+              alt="floating avocado"
             />
           </div>
         </div>
