@@ -66,7 +66,6 @@ export default function Products() {
   exit: { opacity: 0, y: -40 },
 };
 
-
   return (
     <motion.div
     variants={pageVariants}
@@ -136,9 +135,11 @@ please use '' instead of "" for the routes. Also note that the routes are going 
           </NavLink>
         </div>
 
-        <div className="m-auto grid max-w-[350px] grid-cols-1 items-center gap-3 pt-10 sm:max-w-none sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {/* Outlet for nested routes of the various drinks */}
           <Outlet />
-        </div>
+
+{/* viewdetails section */}
+
         <AnimatePresence >
           {/* note that whenever you use Animatepresence for conditional rendering or mapping components, the <Animatepresence></Animatepresence> must be outside the {} (the curly braces where
 the render logic sits). Else, your exit animation won't work */}

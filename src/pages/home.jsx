@@ -41,6 +41,41 @@ export default function Home() {
     }
   };
 
+      const values = [
+            {
+              title: "Fresh Ingredients, Timeless Taste",
+              description:
+                "At Seasoned Fireworks, we believe that great taste starts with great ingredients. Our vegetarian soft drinks are made with fresh, natural ingredients, carefully blended to give you a sip of nolstagia with every bottle.",
+              className: "mx-auto max-w-96 py-12 md:h-72 md:max-h-96 lg:h-auto lg:max-h-none"
+            },
+            {
+              title: "For Women, By Women",
+              description:
+                "We celebrate the strength, elegance and vibrance of women everywhere. Our drinks are crafted with you in mind -- interesting, energizing, and full of character",
+              className: "mx-auto max-w-96 py-12 md:h-72 md:max-h-96 lg:h-auto lg:max-h-none"
+            },
+            {
+              title: "A Colourful Experience",
+              description:
+                "Every drink we make is designed to light up your day. Whether you're reminiscing about the good old days, or making new memories, every sip is fireworks 🎉.",
+              className: "mx-auto max-w-96 py-12 md:col-span-2 md:h-72 md:max-h-96 lg:col-auto lg:h-auto lg:max-h-none"
+            }
+          ];
+
+    const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3, // delay between each child
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: {duration: 0.5 } },
+  };
+
   return (
     <div>
       <motion.section 
@@ -95,6 +130,8 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
+
+      {/* Our Values Section */}
       <section 
       className={`py-20 text-dark rounded-t-xl -z-10 text-center ${theme === "light" ? "bg-[#171511]" : "bg-[#2a2926]"}`}>
         <motion.div 
@@ -117,69 +154,31 @@ export default function Home() {
         className="text-3xl font-bold sm:text-4xl lg:text-3xl">
           Our Values
         </motion.div>
-        <div className="m-auto mt-10 grid max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}/* when using viewport in framer motion, always remember to set the initial 
-            prop because if there is no initial prop, "once: true," will not work */
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.2 }}
-        viewport={{ once: true, amount: 0.3, //don't go below 0.3 and don't use any of the text values 
-        }}
-            className={`mx-auto max-w-96 py-12 md:h-72 md:max-h-96 lg:h-auto lg:max-h-none ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
-          >
-            <div className="transition-all duration-[0.5s] hover:-translate-y-4">
-              <h3 className="text-cta text-xl font-semibold md:text-2xl">
-                Fresh Ingredients, Timeless Taste
-              </h3>
-              <p className="mt-2">
-                At Seasoned Fireworks, we believe that great taste starts with
-                great ingredients. Our vegetarian soft drinks are made with
-                fresh, natural ingredients, carefully blended to give you a sip
-                of nolstagia with every bottle.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-          initial={{ opacity: 0, y: 40 }}/* when using viewport in framer motion, always remember to set the initial 
-            prop because if there is no initial prop, "once: true," will not work */
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.2 }}
-        viewport={{ once: true, amount: 0.3, //don't go below 0.3 and don't use any of the text values 
-        }}
-            className={`mx-auto max-w-96 py-12 md:h-72 md:max-h-96 lg:h-auto lg:max-h-none ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
-          >
-            <div className="transition-all duration-[0.5s] hover:-translate-y-4">
-              <h3 className="text-cta text-xl font-semibold md:text-2xl">
-                For Women, By Women
-              </h3>
-              <p className="mt-2">
-                We celebrate the strength, elegance and vibrance of women
-                everywhere. Our drinks are crafted with you in mind --
-                interesting, energizing, and full of character
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-          initial={{ opacity: 0, y: 40 }}/* when using viewport in framer motion, always remember to set the initial 
-            prop because if there is no initial prop, "once: true," will not work */
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.2 }}
-        viewport={{ once: true, amount: 0.3, //don't go below 0.3 and don't use any of the text values 
-        }}
-            className={`mx-auto max-w-96 py-12 md:col-span-2 md:h-72 md:max-h-96 lg:col-auto lg:h-auto lg:max-h-none ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
-          >
-            <div className="transition-all duration-[0.5s] hover:-translate-y-4">
-              <h3 className="text-cta text-xl font-semibold md:text-2xl">
-                A Colourful Experience
-              </h3>
-              <p className="mt-2">
-                Every drink we make is designed to light up your day. Whether
-                you're reminiscing about the good old days, or making new
-                memories, every sip is fireworks 🎉.
-              </p>
-            </div>
-          </motion.div>
-        </div>
+        <motion.div 
+          variants={containerVariants}
+      initial="hidden"
+      whileInView="visible" // triggers when scrolled into view
+      viewport={{ once: true, amount: 0.2 }}
+        className="m-auto mt-10 grid max-w-6xl grid-cols-1 gap-8 px-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+          
+          {values.map((value, idx) => (
+                    <motion.div
+                      key={idx}
+                        variants={childVariants}
+          
+                      className={`${value.className} ${theme === "light" ? "glass" : "glass-tiles"} rounded-xl p-6 shadow-lg`}
+                    >
+                      <div className="transition-all duration-[0.5s] hover:-translate-y-4">
+                        <h3 className="text-cta text-xl font-semibold md:text-2xl">
+                          {value.title}
+                        </h3>
+                        <p className="mt-2">
+                          {value.description}
+                        </p>
+                      </div>
+                    </motion.div>
+                  ))}
+        </motion.div>
       </section>
       <motion.section
       initial={{ opacity: 0, y: 40 }}/* when using viewport in framer motion, always remember to set the initial 

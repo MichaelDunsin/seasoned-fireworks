@@ -26,16 +26,13 @@ variants={pageVariants}
         <motion.div 
           initial={{
         opacity: 0,
-        x: "-100%"
+        x: -60
       }}
       animate={{
         opacity: 1,
         x: 0,
-        transition: {
-          duration: 0.1,
-          delay: 0.2
-        }
       }}
+         transition={{duration: 0.3, ease: "easeInOut"}}
         className=" p-5 rounded-3xl glass-tiles">
           <h3 className="text-2xl font-semibold m-4">Customer Support</h3>
           <div className="flex items-center text-sm">
@@ -63,16 +60,13 @@ variants={pageVariants}
          <motion.div 
           initial={{
         opacity: 0,
-        x: "100%"
+        x: 60
       }}
       animate={{
         opacity: 1,
         x: 0,
       }}
-        transition= {{
-          duration: 0.1,
-          delay: 0.2
-        }}
+        transition={{duration: 0.3, ease: "easeInOut"}}
         className=" p-5 rounded-3xl glass-tiles">
           <h3 className="text-2xl font-semibold m-4">Socials</h3>
           <div className="flex items-center text-sm">
