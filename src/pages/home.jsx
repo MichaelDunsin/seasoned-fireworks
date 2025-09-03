@@ -113,19 +113,45 @@ export default function Home() {
           </div>
           <div className="relative lg:w-1/2">
             <img
-              src="/images/floating orange.webp"
+              src="/images/floating orange-large.webp"
               className="bounce1 absolute w-1/4 max-w-40"
               alt="floation orange"
+               srcSet="/images/floating orange-large.webp 1024w,
+                      /images/floating orange-small.webp 800w" 
             />
             <img
-              src="/images/hero.webp"
-              className="m-auto w-2/3 max-w-md lg:max-w-none"
+              src="/images/hero-large.webp" //the only reason this is here is if you are usinga really outdated browser that doesn't support srcSet
+              /* the srsSet attribute is used to change the sizes of images we load on different screen sizes, e.g small 
+              size on mobile, medium on tablet and large on desktop,the srsSet uses the actual width of the screen of the 
+              device we are on to determine what image to display, so if we are on a screen that is 600px wide, it will load the
+              image that is 600px wide or the closest to it.
+               */
+
+              /* 
+              when using the srcset attribute, you'll list all the images you want with the screen with you want to display them at
+              in pairs and separate them with commas. If the images surpass the width you give them, srcSet will bump you to the
+              next bigger image to ensure that as the screen is increasing, the images are stil looking crisp. if you are going
+              from a larger screen to a smaller screen however, we don't need to re-download a smaller  image so we just use
+              the last image we downloaded.
+              */
+              srcSet="/images/hero-large.webp 1024w,
+                      /images/hero-medium.webp 800w, 
+                      /images/hero-small.webp 400w" 
+                      //once 400w is exceeded, we will be bumped to the next bigger image which is 800w
+                      /* 
+              note that we use w instead of px here because w represents the actual intrinsic pixel values of our image and not css pixel 
+              values
+              */
+              
+              className="m-auto min-w-60 sm:w-3/4 max-w-md lg:max-w-none"
               alt="hero"
             />
             <img
-              src="/images/floating avocado.webp"
+              src="/images/floating avocado-large.webp"
               className="bounce2 absolute bottom-3 right-3 w-1/4 max-w-40"
               alt="floating avocado"
+               srcSet="/images/floating avocado-large.webp 1024w,
+                      /images/floating avocado-small.webp 800w" 
             />
           </div>
         </div>

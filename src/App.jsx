@@ -1,4 +1,4 @@
-import React, { lazy, Suspense} from "react";
+import { lazy, Suspense} from "react";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/rootLayout";
 import Home from "./pages/home";
